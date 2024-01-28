@@ -1,0 +1,2338 @@
+ //code 1[Refactoring]
+input=prompt("Enter one  letter");
+le=['a','b','c','d','e','f','g','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+ for(i=0;i<26;i++)
+{ bin=(le[i]==input)?1:0; console.log(bin);}
+//code 2
+food=['Rice and Stew','Fried plantain with pepper','Jollof and chicken']; 
+for(i=0;i<food.length;i++){ console.log(i+"."+food[i]);}; price=['100','40','70'];
+input=prompt("Select an option"); check=0;
+for(i=0;i<food.length;i++){ check=(food[i]===food[input])?check:'false';};
+
+//code 3
+// Order food
+try{food=['Rice and Stew','Fried plantain with pepper','Jollof and chicken']; 
+console.log("Select an option");for(i=0;i<food.length;i++){ console.log(i+"."+food[i]);};
+price=['100','40','70'];input=prompt("Select an option"); 
+console.log("\t You ordered "+food[input]+"\n" +"Price: "+price[input]+" cedis\n Thanks for ordering ");} 
+catch{ console.log("Error");}
+
+// code 4 tells us whether user request is found in food list .
+food=['Rice and Stew','Fried plantain with pepper','Jollof and chicken']; 
+for(i=0;i<food.length;i++){ console.log(i+"."+food[i]);}; price=['100','40','70'];
+input=prompt("Select an option"); check=0;console.log("My input fooling is "+input); input=parseInt(input);
+for(i=0;i<food.length;i++){ console.log("Hello"+i+":");if(i==input){'True';break;} else {'false';};}
+
+code5 food=['Rice and Stew','Fried plantain with pepper','Jollof and chicken']; 
+for(i=0;i<food.length;i++){ console.log(i+"."+food[i]);}; price=['100','40','70'];
+input=prompt("Select an option"); check=0;console.log("My input fooling is "+input); input=parseInt(input);
+for(i=0;i<food.length;i++){ console.log("Hello"+i+":");if(i==input){'True';console.log("Ordered food is found ");break;} else {'false';};}
+
+//code 6 
+input=prompt("Enter one  letter");
+le=['a','b','c','d','e','f','g','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+ for(i=0;i<26;i++)
+{ {bin=(le[i]==input)?1 :0;};console.log(bin);}
+
+
+//code 7 deletion queue algorithm
+arr=[2,4,5,6,7,'p'];console.log("Before deletion")
+console.log(arr);
+for(i=0;i<arr.length;i++)
+{ arr[i]=null;};console.log("After deletion");console.log(arr); 
+//==>Why print some text different from arr is that I want it in be array format meaning like this [num1,num2,...,numN]
+
+//code 8 check isArrFull
+arr=[2,4,5,6,7,'p']; arr.length=4294967295;
+// check if arr is empty or full 
+if(arr.length>4294967296){
+console.log("Array size full");}
+else{ console.log("Array not full");console.log("Happy Coding !");}
+
+
+// code 9 insert a node  at  a particular  location 
+NodeAddToEndOfArr=(arr,node)=>{
+ //adding data at the end of Arr
+  i=arr.length; /*Node extended*/
+console.log(i);arr.length=node.length*i;console.log(arr.length); //enlarge arr size
+ console.log(node.length);//check new length of arr passed
+for(b=0;i<arr.length&b<node.length;i++,b++){arr[i]=node[b]; 
+console.log(node[b]);;};console.log(arr); }
+arr=[2,4,5,6,7];
+node=[3,6,5,7];console.log(arr.length);
+// check if arr is empty or full 
+if(arr.length>4294967296){
+console.log("Array size full");}
+else{
+ console.log("Array not full");
+NodeAddToEndOfArr(arr,node);   
+
+
+
+
+//code 10 Insert element in middle part of arr.
+arr=[4,6,7,8,5];node=[34,5,6,3];NewArr=[];
+//function declaration
+addNodeToMiddleOfArr=(arr,node)=>
+{
+  len=arr.length;Middle=0;NewArrSize=0;
+  if(len!=null){  Middle=len/2; /*Divide  arrIndex into two*/; NewArrSize=len*len*node.length;console.log(NewArrSize);NewArr[NewArr];};
+  /*add element of arr to NewArrSize when is greater than Middle append node  berfore the rest of arr element*/ 
+  for(i=0;i<Middle;i++)
+   { NewArr[i]=arr[i];};console.log(NewArr);if(Middle==i){console.log(len-Middle);};
+
+}
+     ;addNodeToMiddleOfArr(arr,node);//function call
+
+/*Note if Less than Middle so JS  will not let if(Middle==i) works and show undefine but  printing outside condition produce 2.5*/
+
+//code 11
+/*initial stage*/
+arr=[4,6,7,8,5];node=[34,5,6,3];NewArr=[];
+//function declaration
+addNodeToMiddleOfArr=(arr,node)=>
+{
+  len=arr.length;Middle=0;NewArrSize=0;
+  if(len!=null){  Middle=len/2; /*Divide  arrIndex into two*/; NewArrSize=len*len*node.length;console.log(NewArrSize);NewArr[NewArr];};
+  /*add element of arr to NewArrSize when is greater than Middle append node  berfore the rest of arr element*/ 
+  for(i=0;i<Middle;i++)
+   { NewArr[i]=arr[i];if(i==Middle){console.log("Hello");};console.log(NewArr);pin=len-Middle;console.log("Number of element left to be added "+ parseInt(pin));
+console.log("Node to be added are"+node);
+}
+addNodeToMiddleOfArr(arr,node)
+/*initial stage*/
+
+/*2nd Refactoring*/
+
+arr=[4,6,7,8,5];node=[34,5,6,3];NewArr=[]; 
+//function declaration
+addNodeToMiddleOfArr=(arr,node)=>
+{
+  len=arr.length;Middle=0;NewArrSize=0;
+  if(len!=null){  Middle=len/2;
+  /*Divide  arrIndex into two*/; 
+  NewArrSize=len*len*node.length;/*increasing NewArr size*/
+  console.log(NewArrSize);NewArr[NewArr];};
+  /*add element of arr to NewArrSize when is greater than Middle append node  berfore the rest of arr element*/ 
+  for(i=0;i<Middle;i++)
+   {  NewArr[i]=arr[i];};Middle=parseInt(Middle+1); i=Middle;total=node.length+Middle;for(p=0;i<total||p<node.length;i++,p++){ NewArr[i]=node[p];};                                                                                                                                                                                                                                           ;pin=len-Middle;console.log(NewArr);
+ console.log("Node to be added are"+node);
+ }
+ addNodeToMiddleOfArr(arr,node)
+/*2nd Refactoring*/
+
+/*3rd Refactoring */
+
+NodeToMiddleOfArr=(arr,node)=>
+{
+  len=arr.length;Middle=0;NewArrSize=0;
+  if(len!=null){  Middle=len/2;
+  /*Divide  arrIndex into two*/; 
+  NewArrSize=len*len*node.length;/*increasing NewArr size*/
+  console.log(NewArrSize);NewArr.length=NewArrSize;};
+  /*add element of arr to NewArrSize when is greater than Middle append node  berfore the rest of arr element*/ 
+  for(i=0;i<Middle;i++)
+   {  NewArr[i]=arr[i];};Middle=parseInt(Middle+1);
+  i=Middle;total=node.length+Middle;for(p=0;i<total||p<node.length;i++,p++)
+   { NewArr[i]=node[p];};                          
+   middle=parseInt((len/2)+1); 
+   newTotal=middle+total;
+  for(i;i<newTotal&&middle<(len);middle++,i++){NewArr[i]=arr[middle];console.log(NewArr[i]);}
+   ;pin=len-Middle;console.log(NewArr);console.log("New Arr"+NewArr.length);
+ console.log("Node to be added are"+node);
+ }
+ addNodeToMiddleOfArr(arr,node)
+/*3Refactoring 
+
+/*4 Refactoring*/
+NodeToMiddleOfArr=(arr,node)=>
+{
+  len=arr.length;Middle=0;NewArrSize=0;
+  if(len!=null){  Middle=len/2;
+  /*Divide  arrIndex into two*/; 
+  NewArrSize=len*len*node.length;/*increasing NewArr size*/
+  console.log(NewArrSize);NewArr[NewArrSize];};
+  /*add element of arr to NewArrSize when is greater than Middle append node  berfore the rest of arr element*/ 
+  for(i=0;i<Middle;i++)
+   {  NewArr[i]=arr[i];};Middle=parseInt(Middle+1);
+  i=Middle;total=node.length+Middle;for(p=0;i<total||p<node.length;i++,p++)
+   { NewArr[i]=node[p];};                          
+   middle=parseInt((len/2)+1); 
+   newTotal=middle+total;
+  for(i;i<newTotal&&middle<(len);middle++,i++){NewArr[i]=arr[middle];console.log(NewArr[i]);}
+   ;pin=len-Middle;console.log(NewArr);console.log("New Arr"+NewArr.length);
+ console.log("Node to be added are"+node);
+ }
+ addNodeToMiddleOfArr(arr,node)
+/*4 Refactoring */
+
+// code 12 total count while is incrementing;
+count=1; total=0;
+while(count<10)
+{
+  total+=count;
+  count+=1
+
+
+};
+console.log(total);
+
+
+
+//code 13  totaling
+count=1 ;total =0;
+while(count<=10){total+=count; count+=4;}
+console.log(total);
+
+
+//code 14
+//code 13  totaling
+count=1 ;total =0;
+while(count<=10)
+{console.log("Number count before cal"+count);total+=count; count+=8;}
+console.log(total);
+
+//code 15
+
+
+arr=[4,6,7,8,5];node=[34,5,6,3];NewArr=[]; 
+//function declaration
+addNodeToMiddleOfArr=(arr,node)=>
+{
+  len=arr.length;Middle=0;NewArrSize=0;
+  if(len!=null){  Middle=len/2;
+  /*Divide  arrIndex into two*/; 
+  NewArrSize=len*len*node.length;/*increasing NewArr size*/
+  console.log(NewArrSize);NewArr[NewArr];};
+  /*add element of arr to NewArrSize when is greater than Middle append node  berfore the rest of arr element*/ 
+  for(i=0;i<Middle;i++)
+   {  NewArr[i]=arr[i];};Middle=parseInt(Middle+1);
+  i=Middle;total=node.length+Middle;for(p=0;i<total||p<node.length;i++,p++)
+   { NewArr[i]=node[p];};                          
+   middle=parseInt((len/2)+1); 
+   newTotal=middle+total;
+  for(i;i<newTotal||middle<len;newTotal++,i++){NewArr[i]=arr[middle];}
+   ;pin=len-Middle;console.log(NewArr);
+ console.log("Node to be added are"+node);
+ }
+ addNodeToMiddleOfArr(arr,node) 
+
+//code 16
+Natural Language for GraphGenerator :[Take a set of array and  pass through method or function to generate graph]
+1. Declare arr and assign element and corresponding values ;
+2. GraphGenerator(arr){
+method or function generate for each element : name,corresponding graph ,percentage and make professional judgment
+}
+3. Display all info on screen for user  to see.
+
+
+//code 16
+/*1st Refactoring*/
+a=[];b=[]
+for(i=0,p=0;i<5;p++,i++)
+{
+a[p]=i;
+b[p]=p
+
+}
+if(i==p++)
+{ a[p]=b;}
+console.log(a);
+
+
+/*2nd Refactoring*/
+a=[];b=[]
+
+for(i=0,p=0;i<5;p++,i++)
+{
+a[p]=i;
+b[p]=p
+
+}
+if(i==p)
+{ a[p++]=b;}console.log(a);console.log(a.length);
+;for(i=0;i<a.length;i++){console.log(a[i])};
+
+//Code 17 Linked list 
+/*1st refactoring*/
+class box{
+ data;//declaration
+ next;//another declaration 
+box=(data)=>{this.data=data;}
+}
+;
+boxA=new box(4);
+boxB=new box(1);
+boxC=new box(2);
+/*1st refactoring*/
+/*2nd Refactoring*/
+class box{
+ data;//declaration
+ next;//another declaration 
+box=(data)=>{this.data=data;}
+}
+;
+/*display same result*/
+boxA=new box(4);// 
+
+/*2nd Refactoring */
+
+/*3nd Refactoring*/
+class box{
+ data;//declaration
+ next;//another declaration 
+box=(data)=>{this.data=data;}
+}
+;
+/*display same result*/
+boxA=new box();
+
+/*3nd Refactoring */
+
+/4th Refactoring */
+class box{
+data;
+next;
+box(data){this.data=data;}
+}
+box1=new box();
+box2=new box();box2.data="Solve more problem";
+/*comment:if data and next variable which not assigned for box1 will have undefined*/
+console.log("Box1 data is "+box1.data);
+console.log("Box2 next  is "+box.next); 
+
+/*After assigning the undefined goes away with now tho the values showing */
+box1.data=4;
+box1.next="Hmm"+box2;
+console.log("box1 data is:"+box1.data);
+console.log("Next as is"+box1.next)
+/*4 th Refactoring*/
+/5th Refactoring*/
+class box{
+data;
+next;
+box(data){this.data=data;}
+}
+box1=new box();
+box2=new box();
+/*comment:if data and next variable which not assigned for box1 will have undefined*/  console.log("1.Before Assignment");
+console.log("Box1 data is "+box1.data);
+console.log("Box1 next  is "+box1.next); 
+
+/*After assigning the undefined goes away with now tho the values showing */ console.log("2.After Assignment");
+box1.data=4;
+box1.next=box2;
+console.log("box1 data is:"+box1.data);console.log("Box1 next is");
+console.log(box1.next)
+/*5th Refactoring */
+class box{
+data;
+next;
+box(data){this.data=data;}
+}
+box1=new box();
+box2=new box();
+box3=new box();
+box4=new box();
+
+box1.next=box2;
+box2.next=box3;
+box3.next=box4;
+
+console.log(box3.next)
+
+
+/*5Refactoring*/
+/6th Refactoring*/
+class box{
+data;
+next;
+box(data){this.data=data;}
+}
+box1=new box();
+box2=new box();
+box3=new box();
+box4=new box();
+
+box1.next=box2;
+box2.next=box3;
+box3.next=box4;
+console.log("box1 next is") ;console.log(box1.next);
+console.log("box3 next is");console.log(box3.next);
+/*6th Refactoring*/
+
+
+/*7 th refactoring/
+class box{
+data;
+next;
+box(data){this.data=data;}
+}
+box1=new box();
+box2=new box();
+box3=new box();
+box4=new box();
+/*assignment for each data for specicfic box*/
+box1.data="Box1 data is about story";
+box2.data="Box2 data is about movie";
+box3.data="Box3 data is about Business";
+box4.data="Box4 data is about research";
+
+
+box1.next=box2;
+box2.next=box3;
+box3.next=box4;
+
+console.log(box1.next);console.log(box2.next);console.log(box3.next);
+
+/*7th Refactoring*/
+
+
+/*8 Refactoring */
+class box{
+data;
+next;
+box(data){this.data=data;}
+}
+box1=new box();
+box2=new box();
+box3=new box();
+box4=new box();
+
+/*assignment for each data for specicfic box*/
+box1.data="Box1 data is about story";
+box2.data="Box2 data is after box1";
+box3.data="Box3 data is  after box2";
+box4.data="Box4 data is after box3";
+
+
+box1.next=box2;
+box2.next=box3;
+box3.next=box4;
+
+console.log("Next_node after box1 is:",box1.next);  
+console.log("Next_node after box2 is:",box2.next);  
+console.log("Node _node after box3 is:",box3.next);
+
+story="\t\tLearn from this story. I did not know anything till I found a better tutorial\n which lead me to this .";
+end="What do want to learn just watch video on it\n and keep practising and they will transform you. Happy coding !"
+console.log(story,end);
+/* 8 Refactoring */
+
+/9* Refactoring code*/
+
+
+/*8 Refactoring */
+class box{
+data;
+next;
+box(data){this.data=data;}
+}
+box1=new box();
+box2=new box();
+box3=new box();
+box4=new box();
+
+/*assignment for each data for specicfic box*/
+box1.data="Box1 data is about story";
+box2.data="Box2 data is after box1";
+box3.data="Box3 data is  after box2";
+box4.data="Box4 data is after box3";
+ for(i=0;i<5;i++)
+{ box[i];}
+box1.next=box2;
+box2.next=box3;
+box3.next=box4;
+
+/9* Refactoring code*/
+
+/*10 Ananse version for fun*/
+class box{
+data;
+next;
+box(data){this.data=data;}
+}
+box1=new box();
+box2=new box();
+box3=new box();
+box4=new box();
+
+/*assignment for each data for specicfic box*/
+box1.data="Box1 data is about story";
+box2.data="Box2 data is after box1";
+box3.data="Box3 data is  after box2";
+box4.data="Box4 data is after box3";
+ for(i=0;i<5;i++)
+{ console.log(box+`|i|`);}
+/*10 Ananse version for fun */
+
+
+/*11 version  for play*/
+class box{
+data;
+next;
+box(data){this.data=data;}
+}
+box1=new box();
+box2=new box();
+box3=new box();
+box4=new box();
+
+assignment for each data for specicfic box*/
+box1.data="Box1 data is about story";
+box2.data="Box2 data is after box1";
+box3.data="Box3 data is  after box2";
+box4.data="Box4 data is after box3";
+ for(i=0;i<5;i++)
+{ console.log(box+`|i|`=='');}/* Output: 5x false*/ 
+//
+  
+
+/*12 version fun */
+class box{
+data;
+next;
+box(data){this.data=data;};}
+box1=new box();
+box2=new box();
+box3=new box();
+box4=new box();
+
+/*assignment for each data for specicfic box*/
+box1.data="Box1 data is about story";
+box2.data="Box2 data is after box1";
+box3.data="Box3 data is  after box2";
+box4.data="Box4 data is after box3";
+ /*comment display class plus `|i|` on screen*/
+console.log(box+`|i|`);
+/*12 version fun */
+
+
+
+/*13 version fun */
+class box{
+data;
+next;
+box(data){this.data=data;};}
+box1=new box();
+box2=new box();
+box3=new box();
+box4=new box();
+
+/*assignment for each data for specicfic box*/
+box1.data="Box1 data is about story";
+box2.data="Box2 data is after box1";
+box3.data="Box3 data is  after box2";
+box4.data="Box4 data is after box3";
+ /*comment display class plus `|xl|` on screen*/
+console.log(box+`|xl|`);
+/*13 version fun */
+
+/*14 Version for game*/
+/*Factorial 1*2*3...= answer;
+fac=(n)=>{ if(n==0){return 1;} else {return fac(n-1)*n}}; fac(4);
+/*14 Version for game*/
+
+class box{
+data;next;box=(data)=>{this.data=data;}}
+box1=new box(); box1.data='Experience';console.log(box1.data);
+
+
+....
+/*code 15 calculating the total sum of interior angle of polygon...simple*/
+/*Using n=number of side of the the ploygon,  hence formular =n-2*180*/
+
+n=prompt("Enter number of side of the polygon");
+/* perfroming calculation */
+side=n;
+total=(n-2)*180;
+console.log("The total interior angle of polygon of  side "+side+"is "+total);
+
+
+
+/*code 16 :Finding total numbers of node in a linked List*/
+class Node {
+data;
+next;
+Node (data){
+this.data=data;}
+}
+ head=new Node("a");
+ nodeB=new Node("b");
+ nodeC=new Node("c");
+ nodeD=new Node("d");
+
+
+
+
+
+
+/*code 17*/
+
+class Node { 
+data;
+next;
+Node (data){
+this.data=data;}
+}; h=[]; end=10; arr=[2,3,4,5,6,7,8,7,54,3]
+for(i=0;i<arr.length; i++){ h[i]=new Node(arr[i])};            
+      for(i=0;i<arr.length;i++)
+{h[i].data=arr[i]; console.log(h[i]);}
+/*code17 */
+
+/*code 18*/
+line=['__','____','____','\/'] ;num=[1,2,4,3,5,6,7,'null','0'];                                                      
+   for(i=num.length,l=1;i>0;i--)
+{if(num[i]==null||num[i]==0){console.log("\/");l++};console.log(line[i]);}              
+  if(l>=2){console.log("From north , move east");} 
+
+
+class Node{
+Node head;
+Node data;
+Node (para)
+{ console.log(data);};}
+  beta=new Node;
+console.log(beta);
+
+
+
+/*code 18*/
+
+ men={ name:['Nana Kwame','Sam','Anasara'],gender:['Male','Female','Male'],num:['000','001','002']}  ;     console.log("Record of Customers ");                                                                                        for(i=0;i<=men.name.length-1;i++){console.log(men.name[i]+"\tGender:"+men.gender[i]+"\tid:"+men.num[i]);}
+  /*code 18*/                            
+
+
+
+
+
+
+
+/*code 19 */
+
+
+update=(data)=>{
+
+   
+  console.log("Avail state:"+data);}
+  
+  
+  
+  update("as");
+
+/*code 19*/
+
+
+
+/*code 20 */
+
+update=(data)=>{
+ if(data===''){ 
+   for(i=0;i<1;i++)
+   {console.log("Avail state:"+"");}
+  ;};}
+  update('');  
+/*code 20 */
+
+
+
+
+
+/*code 21*/
+
+percept=['Assin','Kenneth','Sam','Pamel']
+dat=['opp']
+update=(data)=>{
+ if(data==''){ 
+   for(i=0;i<dat.length;i++)
+   {console.log("Avail state:"+percept[i]);}
+  ;};
+  update('');                                                                                    
+/*code 21*/
+
+
+
+ /* code 22 Template Literal `${}*`/
+/*example: 	`${50/2}`;
+console.log(`${50/2}`); 
+//output :25//
+ /*Template Literal `${}*`/
+
+/*code 23 Template literal `${p+x}`*/
+console.log(`${40+2}`)
+//otuput: 42//
+/*Template literal `${p+x}`*/
+
+
+/*code 24 Template literal `${p-x}`*/
+console.log(`${40-2}`);
+//output: 38//
+/*Template literal `${p-x}`*/
+
+
+/*code 25 Template literal `${p*p}` */
+p=5;console.log(`${p*p}`);
+
+/*code 25 Template literal `${p*}` */
+
+/*code 26 Template literal */
+p=23;console.log(typeof`${p}`)
+/*code 26 Template literal */
+
+console.log(`${'Meshach'}`)
+/*code 26 Template literal */
+
+/*Boolean    > */
+console.log(6>0)
+/*Boolean  */
+
+/* Boolean <* /
+console.log(6<0);
+/* Boolean */
+
+
+/*Boolean <= */
+console.log(78<=10)
+/*Boolean */
+
+/Boolean >= */
+console.log((89>=80)
+/Boolean >= */
+/*Boolean */
+console.log('Seen'=='seen')
+console.log("They are not the same");
+output:false
+/*Boolean */
+
+? Design a program which compare users word with the hidden and reward if they get it right?
+word=prompt("Enter a word to win a reward")
+word=(word=="x")?"Winner":"Lose";
+console.log(word)
+
+?Collection of Money and Recording?
+totalRecords=prompt("Enter the total records");
+userName=[];
+userPrice=[];
+for(i=0,p=1; i<totalRecords;i++,p++)
+{
+userName[i]=prompt("Enter name customer:"+p+":");
+userPrice==prompt("Enter price paid:\n")
+
+
+
+}
+heading=()=>{ console.log('List of Payment Records')};
+
+for(a=0,n=1;a<totalRecords;a++)
+{ heading ();
+console.log("User"+n+":"+userName[a]);
+console.log("Price paid:"+":"+userName[a]);
+
+}
+
+
+? Generating each letter in the arr  form start?
+passage=["dvbvdslvjbsssslllllllllldvbldvbvlvbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+vdvndsklnvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvlskbvlvkbvldsvkbdvldvnclknnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnndkvd
+svlsdkvnkkkkkkkknvlkvnldvndlvkkkkkkn"];
+ptot=passage[0].length;
+         for(i=0;i<ptot;i++){
+           console.log(i+":"+passage[0][i]);
+         }
+?Generating each letter in arr from last to start to finish?
+passage=["dvbvdslvjbsssslllllllllldvbldvbvlvbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb      vdvndsklnvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvlskbvlvkbvldsvkbdvldvnclknnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnndkvdsvlsdkvnkkkkkkkknvlkvnldvndlvkkkkkkn"];
+ptot=passage[0].length;
+         for(i=ptot;i>-1;i--){
+           console.log(i+":"+passage[0][i]);
+         }
+
+
+
+//code 27
+ name='Zid';
+ greeting="Hello";
+ console.log(greeting +"!"+zid);
+
+
+//code 28
+ var _name="Zid";
+ const $age=45;
+console.log("Name:"+_name+"\nAge:"+$age);
+
+/*output: 
+Name:Zid
+Age:45*/
+     
+
+//code 28 
+  console.log(true? 1:6)
+
+/*output:   1*/
+ 
+
+//code 29 
+console.log(false?1:0);
+ 
+/*output: 30 Accepting anything*/
+ console.log(5*null)
+/*output: 0*/
+
+/*code 30 
+console.log("5"-1)
+/*output: 3*/
+
+/* code 31 
+console.log("5"+1);
+
+/*output: 51  */
+
+
+/*code 32 */
+console.log(`5`-1)
+/*output: 4*/
+
+/*code 33 */
+console.log(`5`+1)
+/*output: 51*/
+/*code 34 */
+console.log("password"+1);
+/*output: pasword1*/
+
+
+?Create program which enable learners  answer question?
+authenticate=(_name,_email)=>{  
+choice=prompt("Select anoption :\n 1.Show user details\n2.Skip"); 
+choice=(choice==1)?hand():"Message";
+//console.log(choice);
+
+
+}
+_name=prompt("Enter Name"); 
+_email=prompt("Enter Email");
+authenticate(_name,_email);
+
+function hand(){
+  console.log("Name: "+_name+"\nEmail: "+_email);
+    option=prompt("Select an Option \n1.Start Test \n2.Read");
+  if(option==1)
+  { 
+
+Q=["Convert 1000 in binary  form to decimal form","Binary number is made of up of how many number","Convert 1000 to hexadecimal"];
+;A=[8,2,8];
+ learner=[];    score=0
+; correct=[];incorrect=[];
+ console.log(" Hands On  Examination \n--------------------\nMore test . More Experience... \nSubject :Programming Fundamentals \nSolve all question by providing only your answer")
+    ;
+  for(i=0,P=1;i<Q.length||P<Q.length-1;i++,P++)
+    {console.log(Q[i]); learner[i]=prompt("Respond to Question"+P);console.log(learner[i]);
+     if(A[i]==learner[i]){correct[i]='correct'; score++}
+     else{incorrect[i]='Incorrect';}
+    
+    if (i==Q.length-1){  
+  console.log("\nName:"+_name+"\nEmail:"+_email+"\nScore :"+score+"  out of "+Q.length
+);   
+  ;}
+    
+    else {};}
+    }
+ 
+  else{console.log("Mask");}
+}
+
+
+/Removing data from arr code
+//code 36
+q=[2,3,4,5,6,6];
+console.log("The main length of q arr"+q.length);
+for(i=q.length-1;i>=0;i--)
+{console.log(q.pop(-1));
+console.log(q)
+console.log("Length of aarr"+q.length)
+
+}
+if(q==""){console.log(" Array is ");}
+
+
+
+
+/code 37
+square=function(x){ return x*x;}
+square(2);
+console.log(square(2));
+
+
+
+/code 38 
+makeNoise=function(){console.log("Boom!");}
+makeNoise();
+
+
+using function write code which calculate the a number raised to any power or exponent
+
+cal=function(base,power)
+{ outcome=1;
+for(start=0;start<power;start++)
+{ outcome*=base;};
+ return "Answer :"+
+outcome;
+}
+;
+
+console.log(cal(3,4));
+cal(4,6);
+/*output: Answer : 81
+  'Answer :4096';
+
+pomodoro=function(){for(i=0;i<20;)
+{ 
+if(i==4)
+{
+for(j=i;j<10;j++)
+{
+console.log("-------------")
+;}
+;};
+  if(i==11)
+{
+for(j=i;j<15;j++)
+{ gap="    ";console.log(gap+"----");}
+;}
+ ;  if(i==15)
+{
+for(j=i;j<20;j++)
+{console.log("------------");}
+;}
+   
+  ;i++
+};
+ }; pomodoro();
+
+
+/code  :
+/*Display a shape*/
+miniShape=function (){
+for(i=1;i<=3;)
+{ if(i==1){console.log("----------");}
+  else if(i==2){gap="    ";console.log(gap+"---");}
+  else {console.log("----------");};
+ i++;
+}
+;}
+
+miniShape()
+
+/*code :
+/*Refactoring shape */
+minshape=function(){ 
+/* Declare a variable with the keyword*/
+var top="------------";
+var middle="----";
+ console.log(top);
+ console.log("     "+middle);
+ console.log(top);
+}
+/*calling or invoking minshape*/
+minshape()
+
+/code :
+weatherStatus=prompt("Select weather status:\n1. Raining \n2.Warm");                                                                       
+ switch(weatherStatus){ case '1': console.log("Temperature is low and is cold."); break;                                                                    
+ case '2': console.log("Temperature is moderately high and is hot."); break;                                                                         
+ default: console.log("Please try again.");} 
+
+
+/code :
+/* convert weatherStatus to function*/
+var checkWeather=function(){
+weatherStatus=prompt("Select weather status:\n1. Raining \n2.Warm");                                                                       
+ switch(weatherStatus){ case '1': console.log("Temperature is low and is cold."); break;                                                                    
+ case '2': console.log("Temperature is moderately high and is hot."); break;                                                                         
+ default: console.log("Please try again.");} 
+;}
+checkWeather();
+
+
+/*code refactoring of checkWeather*/
+/*What changed ? Instead  of inserting checkWeather variable in the switch statement we instead place prompt statement in  switch statement*/
+checkWeather=function(){
+                                                                       
+ switch(prompt("Select weather status:\n1. Raining \n2.Warm"))
+{ case '1': console.log("Temperature is low and is cold."); break;                                                                    
+ case '2': console.log("Temperature is moderately high and is hot."); break;                                                                         
+ default: console.log("Please try again.");} 
+;
+}
+checkWeather();
+
+
+
+/* creating triangle with code*/
+
+for(i=7;i>0;)
+{
+  g=i; 
+  do {console.log(i+"x"); g--;}
+  while(g!==0);
+i--;
+}
+
+
+/inverse the triangle*/
+for(i=0;i<7;)
+{
+  g=i;
+  do { console.log(i+"x");g--;}
+  while(g!==-1);
+i++
+}
+
+      
+
+
+*Array:
+Trying Exercise:
+function arrayReverse( array){ /*Take array*/ let vArr=[],p=0,l=array.length-1;
+;while((p!==array.length+1)&(l!==-1)){  vArr[p]=array[l] ;p++;l--;}  
+console.log(array.length); ;return vArr;;                                          /*Reverse it and return it */
+}   ; arrayReverse([5,6,7,8,9,10,12,13,]);
+
+
+
+
+Array and Object :
+/*creating phi function.Which does test to find the possiblity of something happening .Eg like the causes of jacque becoming a squirrel*/                                                             
+   function phi(table){   let n11=table[3],n00=table[0], n10=table[2],n01=table[1],nf1=table[2]+table[3],nf0=table[0]+table[1],nb1=table[1]+table[3],nb0=table[0]+table[2];              
+                           return   ((n11*n00)-(n10*n01))/Math.sqrt(nf1*nf0*nb1*nb0)  ;} 
+  /*calling a function beneath*/ m,m* 
+ phi([76,9,4,1])
+
+/*Looping infinite :error : Select huge huge numbers and delete it to  select the second biggest*/
+function elimiSort(numbers){   let result=0,l=-1,Arr=[];   for(let n of numbers){ if (n>result)result=n;l++          
+/*if (l===numbers.length-1){  Arr.push(result);               return Arr;*/   ;}   ;
+let yin=numbers.indexOf(result);      
+console.log(numbers.slice(0,yin).concat(numbers.slice(yin+1)));  ;  /*console.log(numbers) */                  
+ return elimiSort(numbers);;} 
+console.log(elimiSort([4,7,0,33,4,2,6]));
+
+
+Destructing 
+function calpattern([y00,y01,y02,y03]){ return (y00*y01/y02)-(y02/y03/y01);}; table([1,6,7,8]);
+
+List is set of object nested together.
+
+eg : 
+let list={ value:0,rest:{ value:2,rest:{ value:4,rest:null}}};
+ /*Note: Value:0,rest=>Value:2=>Value:4=>rest:null*/
+
+
+
+Higher Order function :
+/*code :Adding element to an array*/
+function genUnit(n,act){ for(let pointer=0;pointer<n;pointer++){ act(pointer);} ;}  ;
+let sec=[]; genUnit(2,pointer=>{sec.push(`Unit ${pointer+1}`);}); 
+console.log(sec);  
+/*code :Adding element to an array*/
+function nameUnit(n,can){          
+for(let p=0;p<n;p++)          
+   { can(p);};};                                              
+let label=[]; nameUnit(6,p=>{label.push(`Unit ${p+1}`);});      
+  console.log(label)
+/*Another way of adding element to array*/
+nameUnit=(n,can)=>{ for(let p=0;p<n;p++) { can(p);};};                                  
+let label=[]; 
+nameUnit(6,p=>{label.push(`Unit ${p+1}`);});        
+console.log(label);
+
+
+/*Which greater 11 0r 10 */
+greaterT=(n)=>{return m=>m>n;} ;
+let greaterThan10=greaterT(10);
+console.log(greaterThan10(11));
+
+/*Building a function from component*/
+function del(f){
+return (...args)=>{ console.log("calling ",args);};
+         }; 
+del(Math.min)(3,40);/*Calling function*/
+
+/*Still building  function with component*/
+function min(f){
+return (...args)=>
+{ console.log("Content",args);   
+  let sol=f(...args); 
+  console.log("Answer",sol);
+
+      }
+;}
+min(Math.min)(5,6,9);
+
+/*Taking function as a parameter*/
+function option(n,the){ if(n) return the ;}        
+  console.log(option(2,()=>{ }));// Remember the=()=>{}
+
+/*Taking function as  argument*/
+ function speak(intake,output){
+   return  output();
+}
+speak(4,()=>{return "Your thought on it"})
+/*Another thing which take argument as function*/
+ function  Well(status){ 
+           return =>predict;
+          }
+   Well(3,()=>"Hi")
+ 
+/*Modified function*/
+function isEven(n,act){ for(let pointer=0;pointer<n;pointer++){ act(pointer);} ;};function unless(test, then) {
+if (!test) then();
+}
+
+ isEven(3, n => {
+unless(n % 2 == 1, () => {
+console.log(n, "is even");});
+});
+/*isEven rewritten model*/
+function isCount(b,action){for(let i=0;i<b;i++)
+{ action(i);} ;}                                            
+function isEven(test,ok){ if(!test) ok ();}                
+ isCount(99,anyVar=>{isEven(anyVar%2==1,()=>{ console.log(anyVar,"is even") ;});});
+/*ForEach is a bad but ...can be sad who can tell is very short*/
+vpin=[4,6,7,8];                                              
+vpin.forEach(l=>{console.log(l);})
+/*pushing element in array to new array*/
+
+function fil(array,test){                                            let cArr=[];                                                for( let data of array){                                     if(data){ cArr.push(data);};}  ;console.log(s);                    return cArr;}  ; let s={ script:[5,4,7,4],
+name: "Coptic",
+ranges: [[994, 1008], [11392, 11508], [11513, 11520]],
+direction: "ltr",
+year: -200,
+living: false,
+link: "https://en.wikipedia.org/wiki/Coptic_alphabet"
+};console.log(fil(s.script,s=>s.living))
+
+/*folding */
+function fold(arr,combine,start)
+{ let current=start;   for(let element of arr){current=combine(current,element);} ;return current;} 
+  console.log(fold([2,4,5.6],(a,b)=>a+b,0))
+
+/*Advancing Folding approach*/
+function fold(arr,combine,start)
+{  let current=start;  for(let element of arr){ current=combine(current,element);} ;return current;} let theArr=[9,4,3,2,3,5,5,6]; 
+ console.log(fold(theArr,(a,b)=>a+b,0));
+/*Another function to do folding is called reduce*/
+console.log([1, 2, 3, 4].reduce((a, b) => a + b));
+
+
+/*Adding in array with an object */
+function cCount(script){                                                      
+  return script.ranges.reduce((count,[from,to])=>{ return count+(to-from) ; },0);};                               
+ let script={
+name: "Coptic",
+ranges: [[994, 1008], [11392, 11508], [11513, 11520]],
+direction: "ltr",
+year: -200,
+living: false,
+link: "https://en.wikipedia.org/wiki/Coptic_alphabet"
+}; cCount(script); 
+/*finding Average*./
+function average(arr){console.log(arr.length); return arr.reduce((a,b)=>a+b)/arr.length;} ;
+
+
+/*Filtering is a powerful way of rebuilding a new array*/
+function map(array, transform) {
+let mapped = [];
+for (let element of array) {
+mapped.push((element));
+}
+console.log(mapped);
+} 
+  let SCRIPTS=["Adlam", "Arabic", "Imperial Aramaic"];     
+let passFunc=s=>s!=="A";
+let do=SCRIPTS.filter(passfunc);
+console.log(do) 
+Nb: The filtering function will take argument written in syntax like:let passFunc=s=>s!=="A" /*the passfunc will build a new array by elimination and exclude those whose name start with "A"*/
+; let do=arrName.filter(passfunc);  /* then consoling it  */ console.log(do)                  
+    
+
+/*
+function cCount(script){                                                      
+  return script.ranges.reduce((count,[from,to])=>{ return count+(to+from) ; },0);};                               
+ let script={
+name: "Coptic",
+ranges: [[994, 1008], [11392, 11508], [11513, 11520]],
+direction: "ltr",
+year: -200,
+living: false,
+link: "https://en.wikipedia.org/wiki/Coptic_alphabet"
+}; cCount(script);
+function map(array, transform) {
+let mapped = [];
+for (let element of array) {
+mapped.push((element));
+}
+console.log(mapped);
+}                                                                            let SCRIPTS=["Adlam", "Arabic", "Imperial Aramaic"];
+let rtlScripts = SCRIPTS.filter(s => s[0]!=="A");
+console.log(map(rtlScripts));
+  
+
+
+
+
+
+
+
+/*Filtering approach*/
+
+function map(array, transform) {
+let mapped = [];
+for (let element of array) {
+mapped.push((element));
+}
+console.log(mapped);
+}                                                                            let SCRIPTS=["Adlam", "Arabic", "Imperial Aramaic"];
+let rtlScripts = SCRIPTS.filter(s => (s[0]!=="A")&&(s[1]!=="d")&&(s[0]=="p"));
+console.log(map(rtlScripts));
+/*Filtering and fooling */
+function map(array, transform) {l
+let mapped = [];
+for (let element of array) {
+mapped.push((element));
+}
+console.log(mapped);
+} 
+  let SCRIPTS=["Adlam", "Arabic", "Imperial Aramaic"];     
+ passfunc=s=>s[0]!=="l";passfunc1=s=>s[1]!=="r";passfunc2=s=>s[2]!=="p"
+let dofil=SCRIPTS.filter(passfunc||passfunc1||passfunc2);
+console.log(dofil) 
+
+/*Filtering expo:in this exposure remember since it has hidden detail output may not prove as expected yet still keep going !HQ .Heat and Question*/
+function map(array, transform) {l
+let mapped = [];
+for (let element of array) {
+mapped.push((element));
+}
+console.log(mapped);
+} 
+  let SCRIPTS=["Adlam", "Arabic", "Imperial Aramaic"];     
+ passfunc=s=>s[0]!=="l";passfunc1=s=>s[1]!=="r";passfunc2=s=>s[2]!=="p"
+let dofil=SCRIPTS.filter(passfunc,passfunc1,passfunc2);
+console.log(dofil) 
+/*Filtering in abyss: not as expected the detail has to be understood*/
+function map(array) {l
+let mapped = [];
+for (let element of array) {
+mapped.push((element));
+}
+console.log(mapped);
+} 
+  let SCRIPTS=["Adlam", "Arabic", "Imperial Aramaic"];     
+ passfunc=s=>s[0]!=="A";passfunc1=s=>s[1]!=="r";passfunc2=s=>s[2]!=="p"
+let dofil=SCRIPTS.filter((passfunc)&&(passfunc1)&&(passfunc2));
+console.log(dofil) 
+/*Filtering in galaxy:Gravitational is unmendable so is this code below ,believe you me it give appropriate output .Just copy the code and run in any console on a webrowser*/
+function map(array) {
+let mapped = [];
+for (let element of array) {
+mapped.push((element));
+}
+console.log(mapped);
+} 
+  let SCRIPTS=["Adlam", "Arabic", "Imperial Aramaic"];     
+let passfunc=s=>s[0]=="Z";
+let dofil=SCRIPTS.filter((passfunc));
+console.log(dofil) 
+/*Filtering is fathomable when is explicable understood but some need ways to understand them*/
+function map(array) {
+let mapped = [];
+for (let element of array) {
+mapped.push((element));
+}
+console.log(mapped);
+} 
+  let SCRIPTS=["Adlam", "Arabic", "Imperial Aramaic"];     
+;let  passfunc1=s=>s[0]!=="I"
+let dofil=SCRIPTS.filter((passfunc,passfunc1));
+console.log(dofil) 
+
+/*Transform ,filtering  and Map: is explosive ,why beast? can give shorthand way of doing yet complex.New created  Map together Transform and Filter help select element  and reorganize them in a a new array.*?
+function map(array,transform) {
+let mapped = [];
+for (let element of array) {
+mapped.push(transform(element));
+}
+return mapped;
+};let SCRIPTS =["Adlam", "Arabic", "Imperial Aramaic"];
+
+let rtlScripts = SCRIPTS.filter(s => s[0]=="A");
+console.log(map(rtlScripts,s=>s));
+/*No fears: s=>s is the transform ,you can modify it arent you are a programmer! modification like s=>s.length;
+rtlScripts uses filter and takes only argument which has the first letter being "A" ,the rest are out of the picture!
+*/
+
+/*With understanding ,remember at God direction and being effortless relaxed and being part of the game no slow nor fast and not wishing for stage to declare the qualifiaction but melting to learn being yourself ,dont meet bad expectation of others*/
+/* It is motivation not real code that can be executed in JS but modification of it in other language may work.Who know ? !1 can be 0 or !0 can be 1 .
+if(!cheer)
+ declare cheer_medicine; 
+ inject cheering_medicine*/
+
+/*Wow! carrying nested addition of numbers*??
+function cCount(script){                                                      
+  return script.ranges.reduce((count,[from,to,[med]])=>{ return count+(to+from+med) ; },0);};                               
+ let script={
+name: "Coptic",
+ranges: [[994, 1008,[5]], [11392, 11508,[5]], [11513, 11520,[5]]],
+direction: "ltr",
+year: -200,
+living: false,
+link: "https://en.wikipedia.org/wiki/Coptic_alphabet"
+}; cCount(script);
+/*Checkwhether argument.living exist*/
+let b={living :[5,3,5]};let SCRIPTS={
+name: "Coptic",
+ranges: [[994, 1008], [11392, 11508], [11513, 11520],b],
+direction: "ltr",
+year: -200,
+living: true,
+link: "https://en.wikipedia.org/wiki/Coptic_alphabet"
+};                                                         let total = 0, count = 0;
+for (let script of SCRIPTS.ranges) {
+if (script.living) {
+ 
+count += 1;
+} 
+}
+console.log(count)
+/*Accessing argument.year in code */
+let b={living :[5,3,5],year:[500]};let SCRIPTS={
+name: "Coptic",
+ranges: [[994, 1008], [11392, 11508], [11513, 11520],b],
+direction: "ltr",
+year: -200,
+living: true,
+link: "https://en.wikipedia.org/wiki/Coptic_alphabet"
+};                                                         let total = 0, count = 0;
+for (let script of SCRIPTS.ranges) {
+if (script.living) {
+total +=script.year;
+count += 1;
+} 
+}
+
+console.log(total)
+
+
+/*Performing computation within the city of code*/
+let b={living :[5,3,5],year:[500]};let SCRIPTS={
+name: "Coptic",
+ranges: [[994, 1008], [11392, 11508], [11513, 11520],b],
+direction: "ltr",
+year: -200,
+living: true,
+link: "https://en.wikipedia.org/wiki/Coptic_alphabet"
+};                                                         let total = 0, count = 0;
+for (let script of SCRIPTS.ranges) {
+if (script.living) {
+total +=script.year;
+count += 1;
+} 
+}
+console.log(count/total);
+let roseDragon = "🌹🐉";
+for (let char of roseDragon) {
+console.log(char);
+}
+/*Starting countBy function as juniors*/
+
+function countBy(items,groupThem)
+{ let countArr=[];
+  for(let things in items)
+   {let countArr.push(groupThe,(things));};
+}
+console.log(countBy([9,5,3,6],n=>n))
+
+/*Each element in the array is halved */
+function halfElement(items,groupThem)                
+{  for( let inside of items)
+    {console.log(groupThem(inside));}  ;
+                                  
+}  halfElement([3,5,3,6],n=>n/2)
+
+/*Mining the index of element in the array */
+function miningIndexOfElement(items,groupThem)
+{ let countArr=[];
+  for(let things in items)
+   { countArr.push(groupThem(things));}; return countArr;
+}
+console.log(miningIndexOfElement([9,5,3,6],n=>n))
+
+
+/*mine treasure which is element in one array to another]
+*/
+function c(items,groupLeaf){                                          
+    let  mining=[];                  
+    for(let within of items)                 
+    { let name=groupLeaf(within);                       
+       let known=mining.findIndex(c=>c.name==name);                                                                                                                                                  
+  if(true){ mining.push({name,mining:1});}                                      
+else { console.log(mining[known].count++);}
+         ;} return mining ;} console.log(c([6,4,6,6],n=>n))
+/*findIndex :hmm some progress*/
+let pin=[7,6,5]; let carryPinElement=[];                                                                                                          
+ for(let inside of pin)                                                   
+{   carryPinElement.push(pin.findIndex(c=>c)); console.log(carryPinElement);}
+
+/*findIndex is radical or change when a tip is modified*/
+let pin=[7,6,5]; let carryPinElement=[];                                                                                                          
+ for(let inside of pin)                                                   
+{   carryPinElement.push(pin.findIndex(c=>c.name==name)); console.log(carryPinElement);}
+
+
+/*findIndex with console.log statement*/
+et pin=[7,6,5]; let carryPinElement=[];                                                                                                           for(let inside of pin)                                                   
+{   carryPinElement.push(pin.findIndex(c=>console.log(c))); console.log(carryPinElement);}
+
+
+/*flatten an array using concat and reduce */
+function flatten(arr)
+{ console.log(arr.reduce((a,b)=>a+b)); let reRRa =[];                              
+  for( let inside of arr){ reRRa=reRRa.concat(inside);} 
+return reRRa;}   
+flatten([7,5,4,6]);  
+
+/*function taking three argument  and performing various function */
+function myLoop(value,test,update){                 
+ for( let run of value){                      
+ if(true){console.log(test(run));}
+ { console.log(update(run));}  ;}                                                                                                    
+;} 
+myLoop([7,6,5],n=>n/2,n=>n);
+
+/*function which half the array content passed and check whether which one is not equal to 5*/
+/
+
+
+/*Version:function taking in array and predicate to return false or through and concating it together with []*/
+function everything (arr,pred) 
+{ for( let midst of arr)
+ {console.log([].concat(pred(midst)));} ;   
+  }                    
+ everything([7,8,9,4],n=>n>3)
+
+/*Version2:Same as above!function taking in array and predicate to return false or through and concating it together with []*/
+function everything (arr,pred)
+ { arr.forEach(n=>console.log([].concat(pred(n))));  }      
+everything([7,8,9,4],n=>n>3)
+
+
+/*Writing a method myself*/
+let read={};
+read.content=function container(package){ console.log(`Reading ${package}`);}; 
+read.content("index: 23123")
+
+/**africanRabbit has  a lot to speak of ,let hear it*/
+function speak(line){
+console.log(`The rabbit says'${line}'`);}
+africanRabbit={origin:"Africa",speak};
+africanRabbit.speak(" if hot, African soil is hot");
+nonAfricanRabbit={origin:"Unknown",speak}
+nonAfricanRabbit.speak("well is snowing in summer")
+ /*Another way of doing*/
+ speak("pain coupled with light reflection"); 
+ speak.call(africanRabbit,"they sell as for sika or cash")
+
+/*function making use of this*/
+function normal()
+{ console.log(this.cord.map(n=>n/this.length));} normal.call({cord:[5,6,7],length:3})
+
+/*Writing the similar to the function which uses this in a similar way no need for call*/
+function normal(t)
+{ console.log(t.cord.map(arrElement=>arrElement/t.length));} 
+normal({cord:[5,6,7],length:3})
+
+/*Checking whether is part of Function.prototype*/
+console.log(Object.getPrototypeOf(Math.min)==Function.prototype);
+/*Whether is part of Array.prototype*/
+console.log(Object.getPrototypeOf([])==Array.prototype)
+
+/*creating similar makeRabbit:Overriding variable*/
+let makeRabbit={ name: ""} ;                               
+let cleanRabbit= makeRabbit;                           
+makeRabbit.limb=4; console.log("The cleanlimb had "+cleanRabbit.limb+"limb in previous");
+/*overiding cleanRabbit.limb  should 9 but let overide it*/
+cleanRabbit.limb=3; console.log("Currently cleanRabbit has"+cleanRabbit.limb+" limbs");
+
+/*Coding : ongoing */
+let same={ name:""}; same.age=6; console.log(same.age,same);
+
+/*console.log([1, 2].toString()); this code sample will produce =>1,2 hence .toString is like calling arr.join(,)
+
+/*Creating map*/
+myFirstMap={Jos:45,Akua:4,Ananse:2}; console.log(`Jos:${myFirstMap.Jos}`)/*the two are the same*/
+
+
+/*coding and Map*/
+
+myFirstMap={Jos:45,Akua:4,Ananse:2}; console.log(`${myFirstMap["Jos"]}`)
+console.log("Is Ananse found in myFirstMap","Ananse" in myFirstMap);   
+console.log("toString is here","toString" in myFirstMap);
+
+/*Modern way of doing thing*/
+let modernMap=new Map();  
+ modernMap.set("Bee",3);modernMap.set("Sena",5);     
+console.log(`Bee's age is ${modernMap.get("Bee")}`);
+
+
+/*Butterfly exist in the code */
+let modernMap=new Map();                           
+  modernMap.set("Bee",3);modernMap.set("Sena",5);    
+ console.log(`Bee's age is ${modernMap.get("Bee")}`); /*checking to see whether butterfly exist in code*/
+  console.log("Butterfly is in code",modernMap.has("Butterfly"))
+
+
+/*Avoiding or eliminating toString  in code below*/
+let modernMap=new Map();                            
+ modernMap.set("Bee",3);modernMap.set("Sena",5);     
+console.log(`Bee's age is ${modernMap.get("Bee")}`); /*checking to see whether butterfly exist in code*/  
+console.log("Butterfly is in code",modernMap.has("Butterfly"));             
+ /*Object.prototype which carry toString and checking whether is in code*/ 
+console.log("toString exist in code here "+modernMap.has("toString")); 
+
+/*creating my getters*/
+let newGetter={ get talk(){ return "Talks Ongoing";}} 
+   console.log(newGetter.talk());
+
+let newGetter={ get talk(){ return "Talks Ongoing";}}; 
+   console.log(newGetter.talk);
+/*silent detector*/
+let silent={ get detect(){return "No noise detected";}} ; console.log(silent.detect);
+
+/*Using symbol*/
+let sy=Symbol("x");                                        Array.prototype[sy]=function(){ return this;} ;  console.log([5,6,7][sy]());
+
+
+/*Unmasking the first project 90% mis understadning */
+let ros=["vc","ex"];                                                                                     
+function buildGraph(point){                                                                      
+  let graph=Object.create(null);                                                           
+ function addEdge(from,to){ console.log(graph[from]=to);}                                      
+for (let [from,to] of point){  addEdge(from,to);} return graph;}    console.log(buildGraph(ros));
+/*Explanation for 90%: code function buildGraph nested with another called addEdge,'for loop' fuel the addEdge by calling or invoking with argument.
+Sneaking into the addEdge while keeping the for loop in the mind  'from' and 'to' will passed  meaning the 'for'
+ be the first hence the object property of graph and 'to' being the property  value. 
+In the start Object.create(null) is assigned to graph creating an object with any no property: {v:"c",e:"x"}*/ 
+
+/*Unmasking progress 70% partial misunderstaning*/
+let ros=["vc","ex"];                                                                                     
+function buildGraph(point){                                                                      
+  let graph=Object.create(null);                                                           
+ function addEdge(from,to){ console.log(graph[to]=from);}                                      
+for (let [from,to] of point){  addEdge(from,to);} return graph;}    console.log(buildGraph(ros))
+/*Explanation 70% : reverses the position of "from" and "To" hence {c:"v",x:"e"}
+
+/*Unmasking the mask 68% partial understanding*/
+let ros=["vc","ex"];                                                                                   
+function buildGraph(point){   
+ let graph=Object.create(null); 
+function addEdge(from,to){ console.log(graph[from]=from);}   
+ for (let [from,to] of point){   addEdge(from,to);} return graph;}  
+  console.log(buildGraph(ros))
+/*Explanation 68% : takes diff approach by retaking itself as it being both property and value : {v:"v",e:"e"}
+
+/*It 50% partial understanding */
+ const  rosine = [
+"Alice's House-Bob's House", "Alice's House-Cabin",
+"Alice's House-Post Office", "Bob's House-Town Hall",
+"Daria's House-Ernie's House", "Daria's House-Town Hall",
+"Ernie's House-Grete's House", "Grete's House-Farm",
+"Grete's House-Shop", "Marketplace-Farm",
+"Marketplace-Post Office", "Marketplace-Shop",
+"Marketplace-Town Hall", "Shop-Town Hall"
+]; /* let ros=["vc","ex"];  */                                                                                  
+ function buildGraph(point){                                                                  
+      let graph=Object.create(null);                                                          
+  function addEdge(from,to){ console.log(graph[from]=from);}                                     
+ for (let [from,to] of point){                                                                 
+ addEdge(from,to);} return graph;}   
+ console.log(buildGraph(rosine))
+
+
+/*Below : is a list of house location and the code took the location as object property and value ,hence the code Takes only the first fragment of the code   
+ the part of each quote element inside.Incase of duplicate or same property and and same value it overriden or replaced by the the  one passed*/
+
+
+const  rosinern = ["Alice's House-Bob's House", "Alice's House-Cabin",];                                                                                                                                        function buildGraph(point){  let graph=Object.create(null);                                                                                                   function addEdge(from,to){ console.log(graph[from]=from);}                                                                                                                for (let [from,to] of point.map(r=>r.split("-"))){addEdge(from,to) ;addEdge(to,from);} return ( graph);}                                                                   console.log(buildGraph(rosinern))
+
+
+/*Find the route and its leading to diff places*/
+function buildGraph(edges) { 
+let graph = Object.create(null);
+function addEdge(from, to) {
+if (graph[from] == null) {
+graph[from] = [to];
+} else {
+graph[from].push(to);
+}
+}
+for (let [from, to] of edges.map(r => r.split("-"))) {
+addEdge(from, to);
+addEdge(to, from);
+}
+return graph; 
+} const roads = [
+"Alice's House-Bob's House", "Alice's House-Cabin",
+"Alice's House-Post Office", "Bob's House-Town Hall",
+"Daria's House-Ernie's House", "Daria's House-Town Hall",
+"Ernie's House-Grete's House", "Grete's House-Farm",
+"Grete's House-Shop", "Marketplace-Farm",
+"Marketplace-Post Office", "Marketplace-Shop",
+"Marketplace-Town Hall", "Shop-Town Hall"
+];
+
+const roadGraph = buildGraph(roads); console.log(roadGraph);
+
+/*Pick last element plus its gift*/
+let des=[ "Kojo-fruit", "Kwame-fango"];                                
+  function bGraph(point){    function addPoint(from,gift){  let  graph=Object.create(null);  if (graph[from]==null)                                                               { graph[from]=[gift];} else{ graph[from].push(gift);}; }  
+for([from,gift] of point.map(r=>r.split("-"))){ ;addPoint(gift,from);} return graph;} 
+console.log(bGraph(des))
+
+
+
+
+/*from A point where the algorithm will  skim and override till it reach the last location/
+
+let des = [
+"Alice's House-Bob's House", "Alice's House-Cabin",
+"Alice's House-Post Office", "Bob's House-Town Hall",
+"Daria's House-Ernie's House", "Daria's House-Town Hall",
+"Ernie's House-Grete's House", "Grete's House-Farm",
+"Grete's House-Shop", "Marketplace-Farm",
+"Marketplace-Post Office", "Marketplace-Shop",
+"Marketplace-Town Hall", "Shop-Town Hall"
+];                                                                                   function buildGraph(point){                                               graph=Object.create(null);                                                                        function addPoint(from,gift)                                        {                                                   if (true){ graph[from]=[gift];}                                        else{ graph[from].push(gift);}; }                            for([from,gift] of point.map(r=>r.split("-"))){ addPoint(from,gift);;} return graph;} buildGraph(des)
+/*AL--->Bob--->cabin=>POST
+BOB=> Town hall;
+Ernies=>Grete
+Grete--->Farm=>shop
+Marktet-->farm-->Post-->Shop=>Town hall
+shop=>Town hall
+Rememeber ---> is where code move and it was replaced,=> means the robot reached or is current at the location which after =>.
+*/
+
+
+/*Gift to given to it costumers */
+let des=[ "Kojo-fruit","Mansa-fruit", "Kwame-fango"];                                
+  function bGraph(point){   let graph=Object.create(null); function addPoint(to,gift){  ;  if (graph[to]==null)                                                               { graph[to]=[gift];} else{ graph[to].push(gift);}; }  
+for([to,gift] of point.map(r=>r.split("-"))){ ;addPoint(gift,to);} return graph;} 
+console.log(bGraph(des))
+/*In the gift to customers let take the two scenarios :"Kojo-fruit","Mansa-fruit" the first in function graph[from]==null ,then graph[gift].push(to) implying who the gift is or are suppose to go to.In the next "Mansa-fruit"  not graph[from] will be false  to null    hence if condition will not but else condition will add  Mansah to the customers since the fruit to be given has already been declared or let say stage or made*/
+
+ create two robo!
+ give task 
+ compare their work using benchmark
+ pronounce efficiency of each
+
+class robo{ constructor(type){ this.type=type;}}
+
+/*creating robo*/
+ let roboX=new robo("X");
+ let  roboY=new robo("Y");
+ 
+  /*task to give*/
+
+   let 
+data=["Ana","Jon","Lenan","Philip","Nana","Wilk"];
+ 
+/*skim through every Element check whether e in it*/
+roboX.speak=function (data){
+
+
+for (let name in data)
+{  
+  /* name.filter(r=>(r=='e'){ return name;});*/ return data[name];
+
+
+}};console.log("roboX work :"+roboX.speak(data));                                                                                                              roboY.speak= function(data){ 
+                    for(let names of data){  return "All";}  }                                  
+     console.log("roboY work :"+roboY.speak(data));
+/*Taking all name and separatin them by comma and display*/
+/*creating robo*/
+ let roboX=new robo("X");
+ let  roboY=new robo("Y");
+ 
+  /*task to give*/
+
+   let 
+data=["Ana","Jon","Lenan","Philip","Nana","Wilk"];
+ 
+
+
+roboX.speak=function (data){ let bag=[];
+for (let name of data)
+{  
+ /*collect the first letter of each*/                             for(let y in name)                                                                                                    {     
+ bag.push(name[y]);
+ } 
+}  return bag;};console.log("roboX work :"+roboX.speak(data));
+
+                    
+   roboY.speak= function(data){  let databag=[];
+          for(let names of data){  for(let i=0;i<names.length;i++){databag.push(names[i]);}} return databag; }                                  
+     console.log(roboY.speak(data));
+
+
+/*Predicting the Efficiency of roboX and roboY */
+
+/*creating robo*/
+ let roboX=new robo("X");
+ let  roboY=new robo("Y");
+ 
+  /*task to give*/
+
+   let 
+data=["Ana","Jon","Lenan","Philip","Nana","Wilk"];
+ 
+
+/*roboY
+roboX.speak=function (data){ let bag=[];let recordX=0
+for (let name of data)
+{  ;
+ /*collect the letter of each*/                         
+for(let y in name){ bag.push(name[y]);recordX++;} 
+}  return recordX;};
+
+/*RoboY*/                  
+   roboY.speak= function(data)
+{  let databag=[];let recordY=0;
+  for(let names of data){  
+for(let i=0;i<names.length;i++){recordY++;databag.push(names[i]);}} 
+return recordY}    
+
+/*predicting Efficiency*/                              
+    ;; function roboEffi(x,y)                                                                                                                                            { let total=x+y; console.log("Robox Efficiency:"+(x/total*100)+"%");console.log("RoboY Efficiency:"+(y/total*100)+"%")};
+   roboEffi(roboX.speak(data),roboY.speak(data))
+
+
+
+/*creating a class  within which add ,delete and has reside*/
+
+class PGroup{   /*class activity*/                         get add() {console.log("Data add currently");}        get has(){ console.log("Hmm");}                       get   delete(){ console.log("Data deleted!"); }   }                                                                                           let Pgroup=new PGroup();Pgroup.add; Pgroup.delete;   Pgroup.has  
+
+HTML :
+<!doctype html>
+<html>
+<head><meta charset="utf-8"></head>
+  
+ <body> </body>
+
+<html>
+
+
+elt, which creates an element node
+and treats the rest of its arguments as children to that node.Attributes:add extra info.
+
+Attribute
+some has hypen while other use camelCase.
+<p id="para" style="color: purple">
+Nice text
+</p>
+<script>
+let para = document.getElementById("para");
+console.log(para.style.color);
+para.style.color = "magenta";
+</script>
+Some style property names contain hyphens, such as font-family. Because
+such property names are awkward to work with in JavaScript (you’d have to
+say style["font-family"]), the property names in the style object for such
+properties have their hyphens removed and the letters after them capitalized
+(style.fontFamily).
+
+CSS:
+eg:
+<style>
+/*statement stay here*/
+</style>
+
+
+eg;
+ <p> Hello</p>
+<style>
+ p {
+ color: blue;
+font-style: italic;
+}
+</style>
+
+
+
+The cascading in the name refers to the fact that multiple such rules are
+combined to produce the final style for an element.One with higher precedence win.
+In styling in CSS  
+.className  for class
+#idName    for  id
+
+/* p(paragraph) elements with id main and with classes a and b */
+p#main.a.b {
+margin-bottom: 20px;
+}
+
+
+Query selector:
+selector syntax
+The querySelectorAll method, which is defined both on the document object
+and on element nodes, takes a selector string and returns a NodeList containing
+all the elements that it matches.
+
+<p>And if you go chasing
+<span class="animal">rabbits</span></p>
+<p>And you know you're going to fall</p>
+<p>Tell 'em a <span class="character">hookah smoking
+<span class="animal">caterpillar</span></span></p>
+<p>Has given you the call</p>
+<script>
+function count(selector) {
+return document.querySelectorAll(selector).length;
+}
+console.log(count("p")); // All <p> elements
+// → 4
+console.log(count(".animal")); // Class animal
+// → 2
+console.log(count("p .animal")); // Animal inside of <p>
+// → 2
+console.log(count("p > .animal")); // Direct child of <p>
+// → 1
+</script>
+
+
+Positioning and Animation:
+absolute and relative
+
+<h1 style="text-align:center"> Hello</h1>
+
+<img src="myface.jpg"  style="position:relative">
+Event: 
+mouse and keyboard activities are all event.
+
+Event HANDLERS
+
+<p>Click this document to activate the handler.</p>
+<script>
+window.addEventListener("click", () => {
+console.log("You knocked?");
+});
+</script>
+
+*Writing event listeners:
+<h1> Click to trigger event on the console<h1>
+<script>
+  window.addEventListener("click" ()=>{ 
+  console.log("User clicked");})
+</script>
+
+
+/*Writing eventhandlers*/
+ <p> The story is coming now</p>
+< script>
+ let parag=document.querySelector("p")
+; parag.addEventListener("click" ,()=>{console.log("clicked:True");})
+</script>
+
+
+/*event doing*/
+
+<button>Act-once button</button>
+<script>
+let button = document.querySelector("button");
+function once() {
+console.log("Done.");
+button.removeEventListener("click", once);
+}
+button.addEventListener("click", once);
+</script>
+
+
+
+
+
+/*removeEventListener*/
+<button>Click me and see console</button>
+<script>
+let  button=document.querySelector("button");
+ function once(){
+ console.log("Done");
+ button.removeEventListener("click",once);}
+
+</script>
+
+
+/*mouse event handling */
+<button>Click me any way you want</button>
+<script>
+let button = document.querySelector("button");
+button.addEventListener("mousedown", event => {
+if (event.button == 0) {
+console.log("Left button");
+} else if (event.button == 1) {
+console.log("Middle button");
+} else if (event.button == 2) {
+console.log("Right button");
+}
+});
+</script>
+
+
+/Writing mouse event handling */
+<button> click any how</button>
+<script>
+ let button=document.querySelector("button");
+ button.addEventListener("mousedown",event=>{
+  if(event.button===0){ console.log("clicked left button");}
+  else if(event.button===2){ console.log("clicked right button");}
+}
+)
+</script>
+ 
+
+/*stopPropagate*/
+<p>A paragraph with a <button>button</button>.</p>
+<script>
+let para = document.querySelector("p");
+let button = document.querySelector("button");
+para.addEventListener("mousedown", () => {
+console.log("Handler for paragraph.");
+});
+button.addEventListener("mousedown", event => {
+console.log("Handler for button.");
+if (event.button == 2) event.stopPropagation();
+});
+</script>
+
+
+/*Writing some stopPropagation*/
+<p>A game <button> start</button></p>
+<script>
+let para=document.querySelector("p");
+let button=document.querySelector("button");
+  para.addEventListener("mousedown",()=>{
+      console.log("paragraph at work");});
+button.addEventListener("mousedown",event=>{ console.log("left button") ;
+if(event.button==2)event.stopPropagation();})
+</script>
+
+/Target in event*/
+<button>A</button>
+<button>B</button>
+<button>C</button>
+<script>
+document.body.addEventListener("click", event => {
+if (event.target.nodeName == "BUTTON") {
+console.log("Clicked", event.target.textContent);
+}
+});
+</script>
+
+
+/*Writing target event */
+<button> A</button>
+<button> B </button>
+<button> C </button>
+<script>
+document.body.addEventListener("click", event=>{
+  if(event.target.nodeName=="BUTTON")
+  {  console.log("Clicked",event.target.textContent;}
+          }
+</script>
+
+
+/*Default action*/
+we will use [preventDefault()]
+
+<a href="mysite">Ansah</a>
+<script>
+let link=document.querySelector("a");
+ link.addEventListener("click",event=>{
+console.log("Nope");
+event.preventDefault();});
+</script>
+
+
+key event:
+When a keyboard is clicked keydown is released but if a  is not clicked then is keyup
+
+eg:
+<p>This page turns violet when you hold the V key.</p>
+<script>
+window.addEventListener("keydown", event => {
+if (event.key == "v") {
+document.body.style.background = "violet";
+}
+});
+window.addEventListener("keyup", event => {
+if (event.key == "v") {
+document.body.style.background = "";
+}
+});
+</script>
+
+/*writing my own:*/
+<p> Chnage background color by click c </p>
+<script>
+window.addEventListener("keydown",event=>{
+ if (event.key=="v"){ document.body.style.background="pink";}
+})
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Key event [Using combination]
+Here use of shiftKey, ctrlKey, altKey, and metaKey properties of keyboard 
+<p>Press Control-Space to continue.</p>
+<script>
+window.addEventListener("keydown", event => {
+if (event.key == " " && event.ctrlKey) {
+console.log("Continuing!");
+}
+});
+</script>
+
+<p> Press Control-Space  and see the console.log</p>
+<script>
+window.addEventListener("keydown",event=>{
+ if(event.key==" "&& event.ctrlKey){ console.log("You pressed both  space  and control key ");}
+ });
+</script>
+
+
+
+/*Accepting input: using the word  <input>  or <textarea>
+
+
+Pointer  Event:
+is not every tech uses  keyboard ,mouse but others like trackball touchpad
+
+
+/*Making  Dot using mouse*/
+<style>
+body {
+height: 200px;
+background: beige;
+}
+.dot {
+height: 8px; width: 8px;
+border-radius: 4px; /* rounds corners */
+background: blue;
+position: absolute;
+}
+</style>
+<script>
+window.addEventListener("click", event => {
+let dot = document.createElement("div");
+dot.className = "dot";
+dot.style.left = (event.pageX - 4) + "px";
+dot.style.top = (event.pageY - 4) + "px";
+document.body.appendChild(dot);
+});
+</script>
+
+/*Making dot using mouse using  mine*/
+<style>
+body{
+ height:200px;
+background: blue;}
+.dot { height: 8px;width :8px;
+       border-radius:4px;
+       background:red;
+       position:absolute
+     }
+
+
+</style>
+
+<script>
+document.addEventListener("click",event=>{
+let document.createElement("div");
+dot.className="dot";
+dot.style.left=(event.pageX-4)+"px";
+dot.style.top=(event.pageY-4)+"px";
+document.body.appendChildren(dot);
+});
+</script>
+
+/*Writing anime:*/
+
+
+<p style="text-align: center">
+<img src="img/cat.png" style="position: relative">
+</p>
+<script>
+let cat = document.querySelector("img");
+let angle = Math.PI / 2;
+function animate(time, lastTime) {  console.log(time,lastTime);
+if (lastTime != null) {
+angle += (time - lastTime) * 0.001;
+}
+cat.style.top = (Math.sin(angle) * 20) + "px";
+cat.style.left = (Math.cos(angle) * 200) + "px";
+requestAnimationFrame(newTime => animate(newTime, time));
+}
+requestAnimationFrame(animate);
+</script>
+
+
+/Writing anime*/
+<p style="text-align:center">
+<img src="img/cat.png" position="relative">
+</p>
+
+<script>
+let cat=document.querySelector("img");
+ let angl=Math.PI/2;
+ function anime(time,lastTime){
+ if(lastTime!=null){  angl+=(time-lastTime)*0.002;}
+cat.style.top=(Math.sin(angl)*20)+"px";
+cat.style.left=(Math.cos(angl)*20)+"px";
+requestAnimationFrame(newTime=>anime(newTime,time))
+}
+requestAnimationFrame(animate);
+</script>
+/*Mouse move:
+track mouse  motion!
+we will be using "mousemove".
+Whenever a mouse  move "mousemove" is triggered.
+
+
+
+/*Drag using mouse */
+<p>Drag the bar to change its width:</p>
+<div style="background: orange; width: 60px; height: 20px">
+</div>
+
+<script>
+let lastX; // Tracks the last observed mouse X position
+let bar = document.querySelector("div");
+
+bar.addEventListener("mousedown", event => {
+if (event.button == 0) {
+lastX = event.clientX;
+window.addEventListener("mousemove", moved);
+event.preventDefault(); // Prevent selection
+}
+});
+
+function moved(event) {
+ 
+if (event.buttons == 0) {
+window.removeEventListener("mousemove", moved);
+} else {
+let dist = event.clientX - lastX;
+let newWidth = Math.max(10, bar.offsetWidth + dist);
+bar.style.width = newWidth + "px";
+lastX = event.clientX;
+}
+
+
+}
+</script>
+
+/*Mouse used to drag */
+<div  style="background:blue;width:20px;height:10px"></div>
+
+<script>
+let lastX;
+let bar=document.querySelector("div");
+
+bar.addEventListener("mousedown",event=>{
+ if(event.button==0){
+  lastX=event.clientX;
+window.addEventListener("mousemove",moved);
+event.preventDefault();}
+});
+
+
+function moved(event){
+if(event.buttons==0)
+{window.addEventListener("mousemove",moved);} 
+  else {let dis=event.clientX-lastX;
+        let newWidth=Math.max(10,bar.offsetWidth+dis);
+        bar.style.width=newWidth+"px";
+        lastX=event.clientX;}
+
+
+}
+</script>
+
+
+<div style="background:green;width:40px;height:23px"></div> 
+
+
+<script>
+let bar=document.querySelector("div");
+let lastX;
+
+bar.addEventListener("mouse" event=>{
+if(button==0){
+  lastX= event.clientX;
+window.addEventListener("mousemove",moved);
+event.preventDefault();}
+});
+
+function moved(event){
+if (event.buttons==0)
+{ window.addEventListener("mousemove",moved);}
+else {let dis=event.clientX-lastX;
+      let newWidth=Math(10,bar.offsetWidth+dis);
+       bar.style.width=newWidth+"px";
+        lastX=event.clientX;}
+}
+</script>
+
+
+
+
+/*Writing more of bar movement*/
+<div  style="background:blue;width:20px;height:10px"></div>
+
+<script>
+let lastX;
+let bar=document.querySelector("div");
+
+bar.addEventListener("mousedown",event=>{
+ if(event.button==0){
+  lastX=event.clientX;
+window.addEventListener("mousemove",moved);
+event.preventDefault();}
+});
+
+
+function moved(event){
+if(event.buttons==0)
+{window.addEventListener("mousemove",moved);} 
+  else {let dis=event.clientX-lastX;
+        let newWidth=Math.max(10,bar.offsetWidth+dis);
+        bar.style.width=newWidth+"px";
+        lastX=event.clientX;}
+
+
+}
+</script>
+
+
+/*Dealing with touch screen*/
+
+Here will use "touchstart" and "touchend".
+a touches property, which holds an array-like object of
+points, each of which has its own clientX, clientY, pageX, and pageY properties.
+
+
+<style>
+dot { position: absolute; display: block;
+border: 2px solid red; border-radius: 50px;
+height: 100px; width: 100px; }
+</style>
+<p>Touch this page</p>
+<script>
+function update(event) {
+for (let dot; dot = document.querySelector("dot");) {
+dot.remove();
+}
+for (let i = 0; i < event.touches.length; i++) {
+let {pageX, pageY} = event.touches[i];
+let dot = document.createElement("dot");
+dot.style.left = (pageX - 50) + "px";
+dot.style.top = (pageY - 50) + "px";
+document.body.appendChild(dot);
+}
+}
+window.addEventListener("touchstart", update);
+window.addEventListener("touchmove", update);
+
+window.addEventListener("touchend", update);
+</script>
+
+
+Scroll Event is fired when when we scroll:
+<style>
+#progress {
+border-bottom: 2px solid blue;
+width: 0;
+position: fixed;
+top: 0; left: 0;
+}
+</style>
+<div id="progress"></div>
+<script>
+// Create some content
+document.body.appendChild(document.createTextNode(
+"supercalifragilisticexpialidocious ".repeat(1000)));
+let bar = document.querySelector("#progress");
+window.addEventListener("scroll", () => {
+let max = document.body.scrollHeight - innerHeight;
+bar.style.width = `${(pageYOffset / max) * 100}%`;
+});
+</script>
+
+
+/*Focus event:"focus" if there is one  but after "blur" takes over*/
+
+eg:
+<p>Name: <input type="text" data-help="Your full name"></p>
+<p>Age: <input type="text" data-help="Your age in years"></p>
+<p id="help"></p>
+<script>
+let help = document.querySelector("#help");
+let fields = document.querySelectorAll("input");
+for (let field of Array.from(fields)) {
+field.addEventListener("focus", event => {
+let text = event.target.getAttribute("data-help");
+help.textContent = text;
+});
+field.addEventListener("blur", event => {
+help.textContent = "";
+});
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            

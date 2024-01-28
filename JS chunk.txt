@@ -1,0 +1,2064 @@
+
+Eloquent Javascript Takeway
+Language hides details not enjoying .
+No need to specify how program jump back and forth but while or do for construct [loop] will..
+bit has to be put in chunk[values] to understand it.Values can be number ,text  and other functions.
+Assuming where values take over computer storage then there is need to put some where to free space .
+Values of number eg 3
+number use  64 bits to  store particular number.Similarly, given 64 binary
+digits, is represented 10 raised to the power 64[That is 10^24] which is equals about 18 quintillion
+(an 18 with 18 zeros after it).Computer memory used to be much smaller, and people tended to use groups
+of 8 or 16 bits to represent their numbers.
+What about negative .bit can be used to store decimal number and nonwhole and even decimals point . These has to be represented.
+2.998e8 =2998 *[10 to the power 8] .This type of number has been represented but taking 9 quadrillion (15 zeros) .So 9 quadrillion (15 zeros) goes  beyond 64 bit hence can not be represented.
+many numbers lose some precision when only 64 bits are available to store them.
+
+Operator s:
+ % is remainder operator  4%2=0 ; 7%2=1
+  Arithmetic operation : use parentheses to escape if you donot know precendence of operators.
+Special numbers:
+Infinity is for large positive number while [-Infinity is for negative number].
+NaN  is also around and stands for 'Not a number'.
+String : 
+here text are in enclosed content in quote[double quote,single quote ,back tick to make text].
+eg `Hello`, 'Hello',"Hello"
+/*Assignment**/ greeting =`Hello` 
+Some character which cannot be put under quote should use backslash (\) 
+eg in='Fan \n Games';
+Another \': 
+ eg data= 'Akua\'s name is every where.'; console.log(data)/* output: Akua's name is every where.
+
+To display \ n as test it must be like this [\"\\n\"]
+eg sentence=" \\n\ is used in JS"; console.log(sentence)//output: \n is used in Javascript.
+eg /*code*/ sentence=" \"\\n\"  is here"; console.log(sentence);//output: "\n"  is here
+
+var sentence="\\n" ;sentence=sentence+" is here";console.log(sentence);
+/output:/n is here
+
+
+
+String can not perform calculation of any sort but can do concatenation.JS strings uses 16 bits per string element.So some characters, such as many emoji, take
+up two “character positions” in JavaScript strings.
+example of concatenation 
+/*code*/
+concatText="Pen" + "is used in traditional school"; console.log(concatText);
+/*code*/
+news="Noon news" ; update=" is upcoming next"; console.log(news+update+"\nstay glued to your TV set");
+
+Expression eg can number or whatever. eg 22 or any word . Like  sentences humans use so is it in programming .
+Semi-colon are need in Javascript.
+binding = variable;
+eg let HighTemperature="High";
+   let  LowTemperature="Low"
+  console.log(HighTemperature);
+  console.log(LowTemperature)
+
+Boolean
+Tenary 
+eg  console.log(false?1:0);
+
+Empty values carry no information eg null and undefined
+ 
+In binding a var is a keyword for declaring variable .
+Variable name can contain numbers but number should not start any variable and should not contain any puntuation  mark.
+It  can contain dollar( $) and (_) underscore
+eg $payment=69.00;
+   _name="Kobi";
+
+Nan [Not a Number] is nonsensical computation and is the only thing which does equals itself.[day3]
+Day 4 [ 14/8/2023]
+1. {!== }or 2.{!===   }  The 2 check the the compared stated whether they are the same
+ eg for 1: console.log(""!==false) ;//output:true.
+        
+eg for 2 : console.log(""!===false) ;//output:false : they are not prescisely the same.
+
+
+
+Consider these 
+a {==}  b{===}
+eg console.log(""==false);//output:true
+   console.log(""===false)//output:false :[It means the two comparing statement are not prescisely the same.]
+
+Boolean operators 
+NaN ,0, empty ,"" are counted as false while others a true.NB empty values carries no meaningful info.
+eg console.log(""||"Meshach")//Output: Meshach
+
+ console.log(0||"Meshach")//Output: Meshach
+
+ console.log(NaN||"Meshach")
+
+
+other
+console.log(0||'!?')
+//output: !?
+
+The same goes for [false && X],
+which is false and will ignore X. This is called short-circuit evaluation
+
+Expression Vrs Statement Vrs Program.
+Expression is a code that produces a value.
+Expression make up statement .
+Program is made of more statement.
+
+eg of program
+1;
+!1;
+
+Statement having effect to machine in order to change state to produce something  hence is called side effect.
+
+
+
+
+Semicolon end the sentences .
+binding=variable; here we attach something but maybe not  stored  in the value
+eg: 
+ten=10; console.log(ten*ten);
+// 100 
+
+eg:
+mensahDebt=12;
+mensahDebt=mensahDebt-2;
+console.log(mensahDebt);
+//10
+
+one=1; two=2;
+console.log(one*two)
+//2 NB:[2 is stored in thin air]
+
+
+greeting="Good Morning ";
+name="Naa";
+console.log(greeting+ name);
+
+
+Binding or variable can be any word except inbuilt keyword.
+Number can be attached to binding or variable name  should   not start  with number.
+Special or reserved words should not be a binding word
+[break case catch class const continue debugger default
+delete do else enum export extends false finally for
+function if implements import interface in instanceof let
+new package private protected public return static super
+switch this throw true try typeof var void while with yield
+]
+
+Collection of binding or variable  with its value is called environment.
+
+
+FUNCTION:is a piece of  program that is wrapped in value.egbinding prompt holds a function that shows a little dialog box that can take input.
+code :
+prompt("Enter passcode");
+
+Executing a function is called calling or invoking or applying .
+A function can be called by specifiying  name of function together with parentheses in curly bracket {()}
+eg addFunction(),displayResult();
+simply to create a function:
+pick a variable name.
+Equate variable name to the function to be created.
+first function keyword is needed.
+second bring parentheses either with parameters or no parameters.eg: (x) or ();
+third  bring curly brackets.{} ;
+eg :creating a function:
+sayHello=function(){
+console.log("Hello");}
+
+How do you call the function?
+Ans:
+variableAssignedToFunction ()
+eg sayHello()
+
+sayPlease=function(){return "Please!";}
+sayPlease();
+
+or 
+sayPlease()=function(){console.log("Please");}
+sayPlease();
+NB: sayHello ,sayPlease function has no parameter or values in the parentheses.
+Creating function with  parameter in parentheses
+
+test=function(name)
+{console.log(name+" the medical test is done successfully!");}
+/*calling test*/
+test("Noma");
+ 
+/*Output: Noma the medical test is done successfully!
+
+creating function with multiple parameters:
+displayRecords=function(companyName,companyAddress,companyLocation)
+{console.log("Company Name:"+companyName+"\n"+"Company Address:"+companyAddress+"\n"+ "Company Location:"+companyLocation);
+}
+/*calling displayRecords*/
+displayRecords("Ananse",'Ananse23444',`Boko`);
+
+/*Output: 
+Company Name:Ananse
+Company Address:Ananse23444
+Company Location:Boko
+
+
+creating function which collect user data and displayRecords:
+/*Accept user data with prompt function ! Remember is a comment*/
+companyName=prompt("Enter company name");
+companyAddress=prompt("Enter company address");
+companyLocation=prompt("Enter company location");
+/*function will take input and display them*/
+displayRecords=function(companyName,companyAddress,companyLocation)
+{console.log("Company Name:"+companyName+"\n"+"Company Address:"+companyAddress+"\n"+"Company Location:"+companyLocation);
+};
+/*call displayRecords*/
+displayRecords(companyName,companyAddress,companyLocation)
+
+we attach keyword to make our function unchangeable or constant
+eg 
+const divideNum=function(a,b){console.log(a/b);};
+divideNum(4,2);
+/*Output: 2
+
+Using let keyword:
+let add=function(v,z){console.log(v+z);}
+add(4,7);
+/*Output:11
+
+Using var keyword;
+var call=function(){ console.log("Wait.. Making a call");
+}
+call();
+/*A function with no return expression or  return without any statement  displays   undefined!
+Return statement determines what is returned by a function and if a function is called it jumps out giving results.
+Parameters to a function behave like regular bindings, but their initial values
+are given by the caller of the function, not the code in the function itself.
+
+Scope:
+There are 
+global scope and local scope.
+Global is visible to all at any where in a program while local scope of variable is visible in a block of code or function.
+Variable declared in function are local .
+Every time the function is called, new instances of these bindings are created.
+Hence each function act in its own environments because there is isolation for each function.
+variable declared with let or const within a block is visible or seen in only the block.The statement before or after the block can access them.
+
+eg:
+console.log(name);
+if(false){
+const name=`Serwaah`;
+ console.log(name);
+}
+ /*Output: 
+
+if(true){
+let  password=`Serwaah`;
+
+};
+console.log(password);
+/*Output: 
+NB: since name in first condition is not accessible outside hence displaying nothing occurs. Same for password in if conditions
+
+
+A variable declared with var whether is within a block or not is a global varible:
+eg 
+console.log(key);
+if(true)
+{
+var key=23;
+}
+console.log(key);
+
+Nb: Answer may vary from one browser to another.
+scope will have some exception
+eg 
+halfMe=function(n){ return n/2;}
+ n=2;
+console.log(halfMe(3); 
+
+/*Output: 1.5
+/code 
+for(i=0; i<10;i=i+0.5 )
+{ console.log(i+"-");}
+
+/code
+for(i=0;p<30;)
+{  var line="---";
+ console.log(line);
+for (j=0;j<3;j++){console.log(line);};
+i++;}
+
+
+
+/code
+for(i=0;i<30;)
+{  var line="---";
+ console.log(line);
+for (j=i;j<5;j++){ line='----';console.log(i+"P"+line);};
+for (j=i;j<9;j++){ line='-------';console.log(i+"P++"+line);};
+i++;}
+
+/code
+for(i=0;i<10;)
+{
+for(j=i;j<4;j++){console.log("----");}
+if(i==5)
+{
+for(j=i;j<10;j++)
+{
+console.log("---")
+;}
+;};i++
+}
+
+
+/code 
+/*make a shape */
+
+for(i=0;i<20;)
+{ 
+for(j=i;j<3;j++){console.log("--------")}
+if(i==4)
+{
+for(j=i;j<10;j++)
+{
+console.log("-------------")
+;}
+;};
+  if(i==11)
+{
+for(j=i;j<15;j++)
+{console.log("--------");}
+;}
+ ;  if(i==15)
+{
+for(j=i;j<20;j++)
+{console.log("------------");}
+;}
+
+
+/code
+/Pomodoro Shape /
+for(i=0;i<20;)
+{ 
+if(i==4)
+{
+for(j=i;j<10;j++)
+{
+console.log("-------------")
+;}
+;};
+  if(i==11)
+{
+for(j=i;j<15;j++)
+{ gap="    ";console.log(gap+"----");}
+;}
+ ;  if(i==15)
+{
+for(j=i;j<20;j++)
+{console.log("------------");}
+;}
+   
+  ;i++
+}
+
+
+Higher Order Function: work on other function .It helps in abstract over "action".
+Some function create new function :
+code:
+greaterT=(n)=>{return m=>m>n;} ;let greaterThan10=greaterT(10);console.log(greaterThan10(11));
+Some function change other function
+code :
+function min(f){
+return (...args)=>
+{ console.log("Content",args);   
+  let sol=f(...args); 
+  console.log("Answer",sol);
+
+      }
+;}
+min(Math.min)(5,6,9);
+
+**forEach is used to enlist element in an array:
+ eg monthExp=[0,9,68,9];
+    monthExp.forEach(l=>{console.log(l);});
+eg: 
+totalAmt=[8,9,64,7];
+monthExp=[0,9,68,9];
+    monthExp.forEach(l=>{console.log(`Month Expenses:${l} million`);});
+    totalAmt.forEach(l=>{ for(let r in ,monthExp){  console.log(`monthAmtLeft:${r-l} million`);})
+
+In data processing the higher Order function shines
+**Script Data:
+Standard 140 sscript : like english or arabic .Twi I have not found some.
+Remember Unicode!
+folding as used in higher order function :
+code:function fold(arr,combine,start)
+{ let current=start; for(let element of arr){current=combine(current,element);} ;return current;}   ;
+console.log(fold([2,4,5.6],(a,b)=>a+b,0));
+
+Composability is where higher order function also shine
+
+String and Character code
+16-bit numbersis what strings are coded
+They are called code unit.
+, UTF-16!
+
+
+// Two emoji characters, horse and shoe
+let horseShoe = "🐴👟";
+console.log(horseShoe.length);
+// → 4
+console.log(horseShoe[0]);
+// → (Invalid half-character)
+console.log(horseShoe.charCodeAt(0));
+// → 55357 (Code of the half-character)
+console.log(horseShoe.codePointAt(0));
+// → 128052 (Actual code for horse emoji)
+charCodeAt method gives you a code unit, not a full character
+code. The codePointAt method, added later, does give a full Unicode character.
+**Object oriented programming has shaped programming language bebiraa or more is said  in English*?
+Utilization of object in programme organization as a principle.
+*Encapsulation : is about breaking a whole fragment into pieces or fraction.
+Each part or fraction handle a small of it own state.
+So a work in each part remain local not global for the time being.
+In need of change ,the code change to become updated.
+Interface grant the narrow approach of each commnuicating.
+Interface has method and properties to be used.
+. Properties that are part of the interface
+are called public. The others, which outside code should not be touching, are
+called private.
+ It is also common to put an
+97
+underscore (_) character at the start of property names to indicate that those
+properties are private.
+ Separating interface from implementation is a great idea. It is usually called
+encapsulation.
+Method holdfunction values.
+eg:of method:
+let rabbit = {};
+rabbit.speak = function(line) {
+console.log(`The rabbit says '${line}'`);
+};
+rabbit.speak("I'm alive.")
+
+/*When a function is called as method,hence we can write : object.method*/
+function speak(line){
+console.log(`The rabbit says${line}`);}
+africanRabbit={origin:"Africa",speak};
+africanRabbit.speak(" if hot, African soil is hot")
+
+Prototypes:
+Watch closely.
+let empty = {};
+console.log(empty.toString);
+// → function toString()…{}
+console.log(empty.toString());
+// → [object Object]
+Prototype exist in object as part of  other property.
+
+Nb: Object
+   Object.prototype
+   Object.getPrototypeOf({});
+console.log(Object.getPrototypeOf({})==Object.prototype);
+console.log(Object.getPrototypeOf(Object.prototype))
+/*Checking whether is part of Function.prototype*/
+console.log(Object.getPrototypeOf(Math.min)==Function.prototype);
+/*Whether is part of Array.prototype*/
+console.log(Object.getPrototypeOf([])==Array.prototype)
+
+Object.prototype will sneakly and indirectly provide access toString as a method
+eg recall
+  let mydata={name:"Jeff"};
+  console.log(mydata.toString)
+
+
+protoRabbit={                      
+    speak(line){ console.log(`The ${this.type}Rabbit says ${ line}`);}
+} ;   
+   let killerRabbit=Object.create(protoRabbit); ;  killerRabbit.type="Killer";                        
+     killerRabbit.speak("HMMMMMM!")
+
+/comment on protoRabbit:killerRabbit has liking property associated with protoRabbit; the speak is property yet a function in protoRabbit,hence derive property from its prototype.*/
+
+classes: =shape of type of object[including it methods and property]
+Object is an instance of a class.
+As instance derives from itst it's prototype so is constructor!New is used in creating a constructor.
+function Rabbit(type) {
+this.type = type;
+}
+Rabbit.prototype.speak = function(line) {
+console.log(`The ${this.type} rabbit says '${line}'`);
+};
+let weirdRabbit = new Rabbit("weird");console.log(weirdRabbit);
+
+classes code :
+class airSpace{
+constructor(airContent){ this.airContent=airContent;}                 
+ speak(statement){ console.log(`The ${this.type} rabbit says ${line}`);}}  ; 
+let earthAir=new airSpace("70% oxgyen");console.log(earthAir.airContent);
+/*class can be used in statement and in expression! */                                                     
+let concept=new class {word(){return "Hi";}};  
+ (concept.word());
+
+
+**Map unlike the map we used to transform things ,Map can be a data structure with keys associated with values.Eg: map names to ages.
+myFirstMap={Jos:45,Akua:4,Ananse:2}; console.log(`${myFirstMap.Jos}`)
+**code:
+myFirstMap={Jos:45,Akua:4,Ananse:2}; console.log(`${myFirstMap["Jos"]}`)
+console.log("Is Ananse found in myFirstMap","Ananse" in myFirstMap);   
+console.log("toString is here","toString" in myFirstMap);
+Object.prototype is here since toString is found in the map,using any plan text as map is dangerous. There are several possible
+ways to avoid this problem. First, it is possible to create objects with no
+prototype. If you pass null to Object.create, the resulting object will not
+derive from Object.prototype and can safely be used as a map.
+eg  console.log("toString".Object.create("null"))
+
+
+/*Avoiding or eliminating toString  in code below*/
+let modernMap=new Map();                            
+ modernMap.set("Bee",3);modernMap.set("Sena",5);     
+console.log(`Bee's age is ${modernMap.get("Bee")}`); /*checking to see whether butterfly exist in code*/  
+console.log("Butterfly is in code",modernMap.has("Butterfly"));             
+ /*Object.prototype which carry toString and checking whether is in code*/ 
+console.log("toString exist in code here "+modernMap.has("toString")); 
+
+/*mapSearch  property called hasOwnProperty*/                  console.log({x:"Anima"}.hasOwnProperty("x"))
+hasOwnProperty is used search of data set and ignore object's prototypes
+
+Revisitation :on prototypes:
+let myproto={colorChoice:"Unknown"} ;          
+     let partyProto=Object.create(myproto);             
+        myproto.colorChoice="Blue"; console.log(myproto.colorChoice);     
+              console.log(partyProto.colorChoice);
+
+/*Prototype :*/
+function Rabbit(type){ this.type=type;}                                                                                                                                                      
+ Rabbit.speak=function(line) {
+console.log(`The ${this.type} rabbit says '${line}'`);
+};
+let weirdRabbit = new Rabbit("weird");console.log(weirdRabbit)
+
+/*Revistation with class */                          
+class extreme{ constructor(type) { this.type=type; };}  
+  let plusExtreme=new extreme("plusExtreme is for all"); 
+console.log(plusExtreme) 
+
+
+/*Vying in classes*/
+let ob=new class{bik(){return "Sale is a portion of a whole business";}}; console.log(ob.bik())
+
+Symbols are created with the Symbol function*
+eg let myfirstSymbol=Symbol("mvd");
+    console.log(myfirstSymbol);
+
+/*convert art to string */
+ let console.log([5,6,7].toString());
+
+/*Expo on symbol*/
+const stringSymbol=Symbol("toString");               
+Array.prototype[stringSymbol]=function(){ return this;} ;   
+/*console.log([5,6,7].toString());*/                     
+console.log([8,9,7][stringSymbol]());
+
+
+Note : the class and object can be expressed containing with symbol using square bracket.
+Mixing symbol with object:
+let saying=Symbol("toString")   ;                   
+let symbol_InObject={[saying](){return "divest or invest";}};           
+console.log(symbol_InObject[saying]())
+
+/*Nesting or adding symbol in object*/
+let saying,rate=Symbol("toString")   ;     
+let symbol_InObject={[saying](){return "divest or invest";},[rate](){return 0.7}};  
+console.log(symbol_InObject[rate]())
+
+/*More exposure  in object sanwitched with symbol*/
+*let saying,rate=Symbol("toString") */  ;                  
+ let symbol_InObject={[("toString")](){return "divest or invest";},/*[("toString")](){return 0.7}*/};              
+ console.log(symbol_InObject[("toString")]())
+Iterator interface :for /of loop are iterable.
+Symbol function has the iterator method:
+hence :Symbol.ierator
+
+*Iterating :hmmm
+eg:
+et  x="ok"[Symbol.iterator](); console.log(x.next());console.log(x.next());console.log(x.next());
+/*Output: {value: "o", done: false}
+          {value: "k", done: false}
+          {value: undefined, done: true}
+*/
+
+class music{ constructor(sing){ this.sing=sing;} ;}  let me =new  music;me.sing="SING"; console.log(me["sing"]);
+
+
+Getter,setter:
+Even properties that are accessed directly
+may hide a method call. Such methods are called getters, and they are defined
+by writing get in front of the method name in an object expression or class
+declaration.
+nb: get is used radically.
+
+
+/*my first getters*/                                     
+let varying={ get size(){return Math.floor(Math.random()*100);}}                          
+ ; console.log(varying.size);   
+ console.log(varying.size)  
+
+Enough! with getter is setter: setters uses set
+/*my first setters*/
+class temp{                                              
+constructor(cel){ this.cel=cel;}                     
+get fahren(){return this.cel*1.8+32; }        
+ set fahren(val){this.cel=Math.abs((val-32));} }      
+let newTemp=new temp(55);
+console.log(newTemp.fahren);
+console.log(newTemp.cel)
+
+/*setters and etc*/
+/*Soaping moth class and setter plus getter*/   
+         class temp{                          
+ b                     constructor(cel){ this.cel=cel;}                    
+                   get fahren(){return this.cel*1.8+32     }        
+                   set fahren(val){this.cel=Math.abs((val-32));} }     
+                let newTemp=new temp(55);console.log(newTemp.fahren);; console.log(newTemp.cel);
+
+
+
+/*Soaping moth class and setter plus getter*/          
+  class temp{  
+   constructor(cel){ this.cel=cel;}               
+  get fahren(){return this.cel*1.8+32     }         
+set fahren(val){this.cel=Math.abs((val-32));} }       
+let newTemp=new temp(55); console.log(newTemp.fahren);         
+newTemp.fahren=93;/*uses the set fahren in the class,then leading newTemp.cel=93-32=61*/           
+   console.log(newTemp.cel);
+
+/*static is new */
+class pat{ constructor(bl){ this.bl=bl;} }  ; 
+ let seek =new pat(5);  console.log(seek.bl)
+
+/*Creating static and accessing it */
+class Temperature {
+constructor(celsius) {
+this.celsius = celsius;
+}
+get fahrenheit() {
+return this.celsius * 1.8 + 32;
+}
+set fahrenheit(value) {
+this.celsius = (value - 32) / 1.8;
+}
+static fromFahrenheit(value) {
+return new Temperature((value - 32) / 1.8);
+}
+};console.log(Temperature.fromFahrenheit(100) );
+
+
+
+/*Soaping moth class and constructor plus static*/    
+   class Temperature {x
+constructor(celsius) {
+this.celsius = celsius;
+}
+
+static fromFahrenheit(value) {
+return new Temperature(value);
+}
+};console.log(Temperature.fromFahrenheit(100) );
+/*Static before fromFahrenheit  help creater an instance of the class*/
+
+/*symbol together with */
+function Rabbit(type) {
+this.type = type;
+}
+Rabbit.prototype.speak = function(line) {
+console.log(`The ${this.type} rabbit says '${line}'`);
+};
+let weirdRabbit = new Rabbit("weird");                      let sy=Symbol("d"); Rabbit.prototype[sy]=7; console.log(weirdRabbit[sy])
+
+
+**Graph is point joined by lines.
+
+
+Persistent data: unchanging data by using Object.freeze(passAnyObject);
+  let freezePass=Object.freeze({password:567});
+  freezePass.password=799;
+  /*Altering the freeze.password nothing happen it still holds to old value not the new one*/
+  console.log(freeze.password)
+
+**Debugging is a hard task in a case where flaws are around in a code.Correct code possess no flaws hence no debugging*.
+Javascript loosness may allow bug in code.
+
+** "use strict" in code to spot problem*
+eg function callerT(){
+   " use strict" ;
+   for ( p=0;p<8; p++){ console.log(p);}
+ }
+
+callerT()
+/*Note error will since declaring binding we forgot let in loop initialization*/
+
+
+function loop(){ "use strict"; for ( can=0;can<10;can++){ console.log("pin");}
+                
+               } loop()
+
+
+/* using "use strict" in case of constructor if creating  a new class  without the word "new " error will pop up*/
+eg:
+"use strict"
+function Person(name) {  this.name = name; }
+let ferdinand = Person("Ferdinand");
+console.log(name)
+
+
+;
+
+/*Here since making a new class using the word "new" word no error will pop up*/
+function Person(name) {  this.name = name; }
+let ferdinand =new Person("Ferdinand");
+console.log(name)
+
+
+
+Testing give superpower
+/*my testing code*/
+function  m(){ if(true) ; }                        
+function test(body,){ console.log(body);if(!body){return "no body exit";}else { return "body exit";} }  
+test(m())
+
+/*Testing on going */
+function  m(){ if(true){return "g";} ; }                        
+function test(body,){ console.log(body);if(!body){return "no body exit";}else { return "body exit";} }  
+test(m())
+
+/*Some Error are mostly not caused by programmers ,sometime is the outside world our program communicate with;Incase of network fail or overload.*/
+
+Error propagation : countermeasures if incase of failure;
+eg function selectGender(question){   let b=Number(prompt(question));
+  if(Number.isNaN(b)) return 0;else return b;}
+
+console.log(selectGender("Many letter make up your firstname"))
+
+
+/*Error propagation */                             
+    let myArr=[4,5,6,7]; 
+function accept(arr){                     if(arr.length==0){ return {failed:true} }
+                                                     else   { return  {element:arr[arr.length-1]} }                     } accept(myArr)
+/*Exception */
+function selectGender(question){   let b=String(prompt(question));
+  if(b.length==0) return 0;else return b;}
+
+console.log(selectGender("Your gender is \n1.Male  \n2.female"))
+Exception:
+When code run in any problem we throw exception to handle.
+
+function promptDirection(question) {
+let result = prompt(question);
+if (result.toLowerCase() == "left") return "L";
+if (result.toLowerCase() == "right") return "R";
+throw new Error("Invalid direction: " + result);
+}
+promptDirection("ffvd")
+
+
+/*my own exception :cute*/
+function doTask(qq){
+  let result=prompt(qq);
+  if(result[0]!=="&") 
+  { throw new  Error("The first character is not &");} 
+ else { return result[0]}
+  }
+console.log(doTask("Enter passcode"));
+
+
+/*Another exception*/
+function doTask(qq){
+  let result=prompt(qq);
+  if(result[0]=="&") 
+  { throw new  Error("The first character is not &");} 
+ else { return result[0]}
+  }
+console.log(doTask("Enter passcode"));
+
+/*Exception  is quite unspeakable*/
+function doTask(qq){
+  let result=prompt(qq);
+  if(result[0]=="&") 
+  { throw new  Error("The first character is not &");} 
+ else { return result[0]}
+  }
+
+/*console.log(doTask("Enter passcode"));  */                      function look(){                                       if(doTask("Type first character")){ return  "Secret is known"}  else { }}                      try { console.log("The ",look())} catch(error){ console.log("New:"+error)}
+
+
+
+/*selective + exception*/
+
+function promptDirTaken(quest){  
+ let collect=prompt(quest);
+  return quest;
+}
+
+  for (;;){
+   try{let bin=promptDirTaken("What is your name");
+   console.log("Dir taken is",bin)
+    break;}
+   catch(e){ console.log("error");}
+   
+
+/*The code accept the direction of user */
+function promptDirTaken(quest){  
+ let collect=prompt(quest);
+  return collect;
+}
+
+  for (;;){
+   try{let bin=promptDirTaken("What is your name");
+   console.log("Dir taken is",bin)
+    break;}
+   catch(e){ console.log("error");}
+  }
+
+
+
+/*Exception: Here if a typo error is present it will say them*/
+class InputError extends Error {}
+function promptDirection(question) {
+let result = prompt(question);
+if (result.toLowerCase() == "left") return "L";
+if (result.toLowerCase() == "right") return "R";
+throw new InputError("Invalid direction: " + result);
+} promptDirection("Let swim")
+   
+/*Left or right where do you chose*/
+
+
+
+/*The code check if the array is empty and throw exception but if array is not empty it print the first element*/
+function firstElement(arr){ if(arr.length==0){throw new Error(" first element is [] ") } return arr[0]}        /*calling first element*/
+  firstElement([])
+
+/*Multiply all element in array*/
+ function Pmultiply  (arr){                                /*ply num*/  /*keep track of all process till the end and  give answer*/ let result=1;                         for (let i of arr){   result*=i}            return result;}   Pmultiply([5,6,7])
+
+
+
+/*Multiply element in a different way*/
+ function Pmultiply  (arr){                                /*ply num*/  /*keep track of all process till the end and  give answer*/ let result=1,effi=0;                        for (let [i,e] of arr.map((r,e)=>[r,e])){   effi++;result*=i}       console.log("Runs efficiency "+effi);     return result;}   Pmultiply([5,6,7])
+
+/*Keep multiplying*/
+ function Pmultiply  (arr){                                /*ply num*/  /*keep track of all process till the end and  give answer*/ let result=1,effi=0;                        for (let [i,e] of arr.map((r,e)=>[r,e])){   effi++;result*=i}        console.log("Runs efficiency"+effi);    return result;}   Pmultiply([5,6,7])
+
+/*Code can multiply element provided they are numbers  regardless of other element */
+function Pmultiply  (arr){                                /*ply num*/  /*keep track of all process till the end and  give answer*/                                          let result=1,Arr=[],effi=0;                            for (let [i,e] of arr.map(((r,e)=>[r,e])))              {  if(i.length!==0&&e.length!==0){effi++;result*=i}}        console.log("Runs efficiency"+effi);    return result;}   Pmultiply(['',5,'',6,"",'']) 
+
+
+/*Unlocking is quite hmm*/
+function withBoxUnlocked(argument){                    let openL=Object.freeze(argument.locked=false);           let unlockBox=Object.freeze(box.unlock=true); return argument} const box = {
+locked: true,
+unlock() { this.locked = false; },
+lock() { this.locked = true; },
+_content: [],
+
+};
+withBoxUnlocked(box)
+
+/*Programming is not about intelligent ones but the ones which function and find the right niche or technology*/
+Finding pattern in string the best tool is regular expression.
+
+eg let patternExit1=new RegExp("ABC");
+   let patternExit2=/ABC/;
+  patternExit 1 & 2 are the same.
+  
+checkout :
+   let smallPattExist1=new RegExp("abc");
+   let smallPattExist2=/abc/
+
+
+/*Compare small and big*/
+ let smallPattExist=/abc/ ;let bigPattExist=/ABC/;           console.log("Both have same pattern:",(smallPattExist===bigPattExist))
+
+to Represent plus, question mark  and other use this approach  
+that is: \element  
+  \+ ,\? 
+As for \n is new line and is preserved.
+
+/*Joining the word "eight" and +*/
+let eightPlus=/eight\+/;  console.log(eightPlus);
+
+
+/*Joining name and semicolon (:) */
+ let nameSemiColon=/name\:/; 
+ console.log(nameSemiColon)
+
+/*Join 	10  and $ */
+ let stringAmtSign=/10\$/;
+  console.log(stringAmtSign);
+
+
+test is a method to see whether pattern compared is true or false
+eg 
+console.log(/abc/.test("abc"));  /*OUTPUT: true*/
+console.log(/abc/.test("Abc"))  /*OUTPUT :false*/
+
+console.log(/abc/.test("Axbc")) /*OOUTPUT: false*/
+
+Remember  the pattern cannot only be found at the start but can be in the middle or the end yet RegExp will turn and say true**
+ let predict=/ach/.test("Meshach");
+ console.log("Does `ach` pattern  exist in Meshach:"+predict);
+
+  /*finding a pattern in the middle of text */
+ let findMiddlePattern=/ad/.test("Many ad are disturbing !Aren't they")
+ console.log("The middle pattern is there:",findMiddlePattern);
+
+
+
+ /*In number intro  square bracket else RegExp may see it as a string.Far or away from that the numbers in square bracket if any of them is found it give true*/
+console.log(/[0123456789]/.test("in 1992")); 
+console.log(/[0-9]/.test("in 1992"))           
+
+Hyphen (-) show a range of characters:
+eg :console.log(/A-Z/.test("#34")) 
+
+/d   means [0-9]
+/d for digit 
+/w  for alphanumeric [word character ]
+/s for whitespace ,newline and others
+
+opposite or inverse of the above:
+/D  for non digit character 
+/W  non alphanumeric characters
+/S  non white space or newline and etc
+
+
+/*Match and expression to look like  01-30-2003 15:20*/
+let dateTime=/\d\d-\d\d-\d\d\d\d\ \d\d:\d\d/
+ console.log (dateTime.test("01-30-2003 15:20"));
+
+/*Match an expression to look like missiontime  likes this " 03:20"
+ Remember : firstnum,secondnum,semicolon, thirdnum,fourthnum
+let begin  code :
+ let missionTime=/\d\d:\d\d/;
+ console.log(missionTime.test("03:20"))
+
+
+/*Day together with number : like "Monday1"
+
+  dayNum=/\w/;
+  console.log(dayNum.test("Monday1"));
+
+/*Day,semicolon with two digit:like  "Monday:02" 
+daySemiNum=/\w:\d\d/
+console.log(daySemiNum.test("Monday:02"));
+
+
+[\d.] mean number or digit  ,dot for special character (like +) 
+
+eg /*Number and +  like : "6+"
+ let numPlus=/[\d.]/;
+ console.log(numPlus.test("6+"))
+
+
+/*To inverse  use caret (^)  
+eg [^01] means  if is compared with any thing containing  0 and 1 then it show false but if is any number excluding 0 and 1 it prints  true
+eg:
+ let exceptZero_One=/[^01]/;
+ console.log(exceptZero_One.test("100010000"));
+console.log(exceptZero_One.test("1005610000"))
+
+/* to implement range  use :{number} or {firstnum,secondnum}
+let dateTime = /\d{1,2}-\d{1,2}-\d{4} \d{1,2}:\d{2}/;
+console.log(dateTime.test("1-30-2003 8:45"));
+
+
+/*Unique range {first,} eg {4,} mean the character can at least four */
+let dateTime = /\d{1,}-\d{1,}-\d{4} \d{1,}:\d{2}/;
+console.log(dateTime.test("1-30-2003 8:45"));
+
+
+subexpression
+/*using + and * :when it affect more than one put in parentheses () , /i  mean case is not taken into consideration or case insentive*/
+let cartoonCrying = /boo(hoo+)/i;
+console.log(cartoonCrying.test("Boohoooohoohooo"));
+
+let cartoonCrying = /boo(hoo+)+/i;
+console.log(cartoonCrying.test("Boohoooohoohooo"))
+
+let cartoonCrying = /boo(hoo+)/i;
+console.log(cartoonCrying.test("Boohoooohoohooo"));
+
+let cartoonCrying = /boo+(hoo+)+/i;
+console.log(cartoonCrying.test("Boohoooohoohooo"));
+
+
+using exec : note apart from test() the exec()  find a match and return it  but give null if match exist not */
+let match=/\d{1,}/.exec("one two 200");console.log(match)
+//VM200:1 ["200", index: 8, input: "one two 200", groups: undefined] ,the match 200;
+
+
+
+let match = /\d+/.exec("one two 100");
+console.log(match);
+
+
+/* .match() behave mirrorly like .exec()
+let matching="one two40".match(/\d{1,}/);console.log(matching)
+
+/More complex" ' 'of the quote  will match "'hello'" and [^'] here  within '' it match only the letter hence "hello" no single quote/
+let quotedText = /'([^']*)'/;
+console.log(quotedText.exec("she said 'hello'"));
+
+//["'hello'", "hello", index: 9, input: "she said 'hello'", groups: undefined]
+
+
+/*Writing regular exp*/
+console.log(/bad(ly)?/.exec("bad"));
+
+// ["bad", undefined, index: 0, input: "bad", groups: undefined],since the ly at bad is not  in the exec's argument there subgroup become undefined
+
+/*coding  regexp*/
+console.log(/bad(ly)?/.exec("badly"));
+
+//["bad", "ly " index: 0, input: "bad", groups: undefined],since the ly at bad is at  in the exec's argument there subgroup become "ly"
+console.log(/(\d)/.exec("123"));
+//["1", "1", index: 0, input: "123", groups: undefined],it take first element "1" then because of the bracket it it first element as subgroup
+
+/*using + for more digit
+console.log(/(\d)+/.exec("123"));/* it pick 123 and later because only \d in bracket as subgroup it picks the last  "3"
+
+
+/*Date class:
+ print some for seeing:
+ console.log(new Date())
+
+
+/*injecting or putting argument for it to run. */
+console.log(new Date(2009,11,9))
+
+/*Note : .2009 -year,11- December, 9 -day. Zero base indexing is the work of date class*/
+
+
+Timestamp uses millisecond in Unix time and is stored from 1970.
+getTime for that or a specific day may give large number.
+eg:
+console.log(new Date(2013, 11, 19).getTime())
+//1387454400000
+
+/*current time   to be generated */
+  let nowTime = Date.now();                              console.log(new Date(nowTime))
+
+/*From 24 hour from to 12 hour form */
+let co= new Date();
+ let myTime=co.getHours(); 
+ if(myTime>12)
+{console.log(myTime/2)}
+ else {console.log(myTime)}
+
+
+/*Show the property or making use of time property in a way1 since there is another way */
+let n=new Date();                      console.log("Year :",n.getFullYear());                  console.log("Month:",(n.getMonth()+1));                console.log("TodayDate Number:",n.getDate());          console.log("Minute of current_time",n.getMinutes()) ;  console.log("Hour of current_time",n.getHours ()) ;    console.log("Seconds of current_time",n.getSeconds()) 
+
+
+/*Show the property or making use of time property in a way2 since there is another way */
+Look solving the problem's answer below with irregular method and regular expression*/
+
+/*irregular approach*/
+function  getDate(strinA,strinB,strinC){                                                                                                                               let [Month,Day,Year]=[strinA,strinB,strinC]; console.log("Month:",Month);  return new Date(Year,Month-1,Day)}                                                           console.log(getDate("12","30","2003"));
+
+/*Regular approach*/
+ function getDate(string){
+    let [ -,month,day,year]=/(\d{1,2})/-/(\d{1,2})/-/(\d{4})/.exec(string);
+    return new Date(year,month-1,day);}
+  console.log(getDate("1-30-2003"));
+
+function getDate(string){
+    let [_,month,day,year]=/(\d{1,2})-(\d{1,2})-(\d{4})/.exec(string);
+    console.log("Wonder",_);return new Date(year,month-1,day);}
+  console.log(getDate("1-30-2003"));
+
+/*Markers*/
+ ^ mark element closer :
+ $ do match element too
+
+eg 
+   /^\d+$/
+ listen : this code ^\d match to first element while +$ take the rest of the element:
+  
+
+/!^/   Listen : match any if start exclamation sign *
+/^!/ Listen : match if start not with !
+
+/b indication word boundary where where start and end and may work like \w 
+   /\bcat\b/.test ("concatenate");//false
+    /\bcat\b/.test ("cat");//true
+     /\bcat\b/.test ("Blackcat");//false
+     /\bcat\b/.test ("catinblack");//false
+
+  pipe (|)  character look like  or operator 
+
+/\b\d+ (pig|chick)s?/.test("20 pig") //true
+
+
+/*stripSingle line comment*/
+function stripComments(code) {
+return code.replace(/\/\/.*/g,"")}  console.log(stripComments("X=10//TEN!"))
+
+
+/*takeAway //  from the string */
+function stripComments(code) {
+return code.replace(/\/\/./g,"")}  console.log(stripComments("X=10//568"))
+
+/*taking // from string */
+function stripComments(code) {
+return code.replace(/\/\/*/g,"")}  console.log(stripComments("X=10//gkgnfglk"))
+
+/*Taking away // regardless of it poistion*/
+function stripComments(code) {
+return code.replace(/\/\/*./g,"")}  console.log(stripComments("Write more //"))
+
+/*Taking many /// from string regardless of the number of it*/
+function stripComments(code) {
+return code.replace(/\/\/*/g,"")}  console.log(stripComments("//////////////////////////////////////////////////////////////Write more //"))
+/*Writing my takeAwayMultiComment*/
+function stripComments(code) {
+return code.replace(/\/\*[^]*\//g,"")}  console.log(stripComments("gngn/*Write more*/bdf "))
+
+
+/*Stripe Away Single or Multi line Comment */
+function stripSingleOrMultiComments(code) {
+return code.replace(/\/\/.*|\/\*[^]*\//g,"")}    
+ console.log(stripSingleOrMultiComments("g//bdf "));
+  console.log(stripSingleOrMultiComment("ML /*Machine Learning */"))
+
+/*Strip Away Single or Multi line Comment in another scenario*/
+function stripSingleOrMultiComments(code) {
+return code.replace(/\/.*|\/\*[^]*\//g,"")}    
+ console.log(stripSingleOrMultiComments("g//bdf "));
+  console.log(stripSingleOrMultiComments("ML /*Machine Learning */"))
+
+/*Greedy as used Regular Expression:
+Because of this behavior, we say the repetition operators (+, *, ?, and {}) 
+are greedy, meaning they match as much as they can and backtrack from
+there. If you put a question mark after them (+?, *?, ??, {}?), they become
+nongreedy and start by matching as little as possible, matching more only when
+the remaining pattern does not fit the smaller match
+
+/*Greedy code*/
+function stripSingleOrMultiComments(code) {
+return code.replace(/\/\/.*|\/\*[^]*\//g,"")}    
+ console.log(stripSingleOrMultiComments("g//bdf "));
+  console.log(stripSingleOrMultiComments("ML /*Machine Learning */"))
+
+
+
+
+/*Modified Greedy Code:Take out only multi or single line comment from sting*/
+function stripSingleOrMultiComments(code) {
+return code.replace(/\/\/.*|\/\*[^]*?\*\//g,"")}    
+ console.log(stripSingleOrMultiComments("g//bdf "));
+  console.log(stripSingleOrMultiComments("/*ML*/ n /*Machine Learning */"))
+ 
+/*Dynamically creating object: remember "gi" mean g- global while i -case insentive.It looks at ji var and since it Letter caese is insentive  ,it compares with test to get any match ,if it get match then it process by putting underscore  before and after */
+let ji="harry"
+let text = "Harry is a suspicious character.";
+let regexp = new RegExp("\\b(" + ji + ")\\b", "gi");
+console.log(text.replace(regexp, "_$1_"));
+
+/*Write my dnamically created object*/
+ let  gender="male";
+ let text="He is a male  with IQ of 180";
+ let regexp=new RegExp("\\b("+gender+")\\b","gi");
+ console.log(text.replace(regexp,"_$1_"))
+//He is a _male_  with IQ of 180.
+
+//same code but similar but slot of modification
+ let  gender="Male";
+ let text="He is a male  with IQ of 180";
+ let regexp=new RegExp("\\b("+gender+")\\b","gi");
+ console.log(text.replace(regexp,"_$1_"))
+
+/*Point:When creating the \b boundary markers, we have to use two backslashes
+because we are writing them in a normal string, not a slash-enclosed regular expression.
+/*Keeping on even is impassable  to on */
+let name = "dea+hl[]rd";
+let text = "This dea+hl[]rd guy is super annoying.";
+let escaped = name.replace(/[[+]/g, "\\$&");
+let regexp = new RegExp("\\b" + escaped + "\\b", "gi");
+console.log(text.replace(regexp, "_$&_"))
+
+
+/*Find the index of string cannot be done  with regular expression  but with search we can.S mean nonwhite space*/
+eg let proTitle=" ML";
+   console.log(proTitle.search(/\S/))
+/*Non white space  is found on the  index  1 because the whitespace is at 0*/
+  console.log("Index of white space is ",proTitle.search(/\s/))
+
+/*1
+Index of white space is  0*/
+
+/*Javascript Regular Expression Object has two property one being the source and lastIndexProperty but need g- mean global or sticky(y) */
+ let pattern = /y/g;
+pattern.lastIndex = 3;
+let match = pattern.exec("xyzzy");
+console.log(match.index);
+// → 4
+console.log(pattern.lastIndex);
+// → 5
+
+/*If they did,let's  ...,quite understandable .Hmm..*/
+
+let pattern =/u/g;
+pattern.lastIndex=0;
+let match=pattern.exec("pugnun");
+console.log("sc",match.index);
+
+
+
+/*Mixing  cla
+
+console.log(match.lastIndex)
+
+/*Working Fragment*/
+let pattern = /u/g;
+pattern.lastIndex = 0;
+let match = pattern.exec("xu");
+console.log(match.index);
+
+console.log(pattern.lastIndex);
+/*sticky vrs global*/
+The difference between the global and the sticky options is that, when sticky
+is enabled, the match will succeed only if it starts directly at lastIndex, whereas
+with global, it will search ahead for a position where a match can start.
+let global = /abc/g;
+console.log(global.exec("xyz abc"));
+158
+// → ["abc"]
+let sticky = /abc/y;
+console.log(sticky.exec("xyz abc"));
+// → null
+
+
+/*Open your eye if the digit is compared more than one  time the second becomes null */
+let digit = /\d/g;
+console.log(digit.exec("here it is: 1"));
+// → ["1"]
+console.log(digit.exec("and now: 1"));
+// → null
+
+/*Let see the different one in which the above is null but here is different*/
+let digit = /\d/g;
+console.log(digit.exec("and now: 1"));
+//["1", index: 9, input: "and now: 1", groups: undefined]
+
+/*Global in regular expression finds all match and add it to the array*/
+console.log("Banana".match(/an/g));
+// → ["an", "an"]
+
+/*be aware with global regular expression ,use them in replace and when using lastIndex*/
+
+
+
+
+looping in regular expression
+eg:This only find number with nothing before or after in string:
+let input = "A string with 3 numbers in it... 42 and 88.";
+let number = /\b\d+\b/g;
+let match;
+while (match = number.exec(input)) {
+console.log("Found", match[0], "at", match.index);
+}
+
+/*Writing mine*/
+let ad="pass 56 and inner layer 2";
+let numInAd=/\b\d+\b/g;
+let match;
+while(match=numInAd.exec(ad)){
+ console.log(" Found :", match[0],"at",match.index);}
+
+
+/*It can extract and find the index of the number regardless of it position*/
+let ad="pas56andinner_9layer2";
+let numInAd=/\d+/g;
+let match;
+while(match=numInAd.exec(ad)){
+ console.log(" Found :", match[0],"at",match.index);}
+/* Found : 56 at 3
+ Found : 9 at 16
+ Found : 2 at 22
+*/
+
+
+THE INI rules:
+- blanks line ignored
+-line in [] are new section
+-line having alphanumeric identifier is followed by = to spice settings to section
+-anything else is invalid
+
+/*split method can take regular expression.*/
+\r=carriage return
+\n =new line 
+
+/*Writing the INI file*/
+function parseINI(string) {
+// Start with an object to hold the top-level fields
+let result = {};
+let section = result;
+string.split(/\r?\n/).forEach(line => {
+let match;
+if (match = line.match(/^(\w+)=(.*)$/)) {
+section[match[1]] = match[2];
+} else if (match = line.match(/^\[(.*)\]$/)) {
+section = result[match[1]] = {};
+} else if (!/^\s*(;.*)?$/.test(line)) {
+throw new Error("Line '" + line + "' is not valid.");
+}
+});
+return result;
+}
+console.log(parseINI(`
+name=Vasilis
+[address]
+city=Tessaloniki`));
+// → {name: "Vasilis", address: {city: "Tessaloniki"}}
+
+
+/*30% understanding in the INI file,writing code collect needed info*/
+function parseINI(string)
+{ let result={};
+  let section={};
+  return string.split(/\n/);}
+parseINI(`Name=bIN
+          [address]
+          city=Kumasi`)
+
+//["Name=bIN ", "          [address]", "          city=Kumasi"]
+
+/*from the INI collect data which has = in it*/
+function parseINI (string)
+{ let section={},match;
+  string.split(/\n/).forEach(line=>{
+  if (match=line.match(/(\w+)=(\w+)/i)){ section[match[1]]=match[2];}
+
+})
+ return section}
+parseINI(`Name=bIN
+          city=Kumasi
+         `)
+
+//{Name: "bIN", city: "Kumasi"}
+
+
+/*Keeping on */
+function parseINI (string)
+{ let section={},match;
+  string.split(/\n/).forEach(line=>{
+  if (match=line.match(/(\w+)=(\w+)/i)){ section[match[1]]=match[2];}
+
+})
+ return section}
+parseINI(`Name=3
+          city=Kumasi
+         `)
+
+//{Name: "3", city: "Kumasi"}
+
+
+/*Collecting data is */
+function parseINI (string)
+{ let section={},match;
+  string.split(/\n/).forEach(line=>{
+  if (match=line.match(/(\w+)=(\w+)/i)){ section[match[1]]=match[2];}
+  else if (match = line.match(/^\[(.*)\]$/)){ section[match[1]]=""}
+})
+ return section}
+console.log(parseINI(`
+name=Vasilis
+[address]
+city=Tessaloniki`));
+
+// {name: "Vasilis", address: "", city: "Tessaloniki"}
+
+
+
+
+
+function parseINI (string)
+{ let section={},match;
+  string.split(/\n/).forEach(line=>{
+  if (match=line.match(/(\w+)+=(\w+)+/i)){ section[match[1]]=match[2];}
+  else if (match = line.match(/^\[(.*)\]$/)){ section[match[1]]=""}             else if (!/^\s*(;.*)?$/.test(line)) {
+throw new Error("Line '" + line + "' is not valid.");
+}
+})
+ return section}
+
+console.log(parseINI(`
+name=Vasilis
+[address]
+city=Tessaloniki`))
+
+// {name: "Vasilis", address: "", city: "Tessaloniki"}
+/* $ and * is used to mark whole line*/
+
+
+   function stripStart(string){   if(match=string.match(/(\w+)/i)){  console.log(match);}}   stripStart("Mes,Hello,Hiop,MFVD");
+
+     function re(string){   if(match=string.match(/(\w+)/i)){  console.log(match[0]);}}   re("Mes,Hello,Hiop,MFVD");
+
+
+International Character :JS has some usable character {é or ß}yet not found in english letter.
+RegExp always works on unicode of each character in stange manner some way without meanng :
+console.log(/🍎{3}/.test("🍎🍎🍎"))
+//false
+
+/p enable unicode option ahead:
+eg 
+console.log(/\p{Script=Greek}/u.test("α"));
+// → true
+console.log(/\p{Script=Arabic}/u.test("α"));
+// → false
+console.log(/\p{Alphabetic}/u.test("α"));
+// → true
+console.log(/\p{Alphabetic}/u.test("!"));
+// → false
+
+/*Exercise*/
+  /*Write programme to extract letter such as car and cat*/
+   let text="cars"
+  let pattern=/(\w+)/.exec(text); console.log(pattern)
+
+    let text="cat"
+  let pattern=/(\w+)/.exec(text); console.log(pattern)
+
+  /*Write a programme the take both cat and cars*/
+  let text="cars and cat";
+  let  pattern =/\b(ca)?.*/.exec(text); console.log(pattern)
+
+
+/*Write that extract cat and car*/
+   
+   let text="cat and Car";
+   let pattern =/\bca(t|r)/.exec(text);
+   console.log(pattern)
+
+/*Prefect in extracting cat and cars from text*/
+  let text="cat and Car";
+   let pattern =/\bca(t|r)/.exec(text);
+   console.log(pattern)
+
+
+/*strip cat and car fro,text*/
+  let text="bfkbblkcatandcarvv";
+   let pattern =/ca.*(t|r)/.exec(text);
+   console.log(pattern)
+
+/*strip pop and prop from text*/
+let text="pop  and prop";
+let pattern=/\p.*(p)/.exec(text);
+console.log(pattern)
+
+/*extract pop and pop*/
+let text="fkvndvlkpop  and propdsvdv";
+let pattern=/p.*p/.exec(text);
+console.log(pattern)
+
+/*Strip pdf from text*/
+let text="Man.pdf,John.pdf";
+let pattern=/(pdf)/.exec(text);
+console.log(pattern)
+
+/*strip these from text "ferret, ferry, and ferrari"*/
+text="vdkdvknferret, ferry, and ferrari"
+let pattern=/ferr.*/.exec(text);
+console.log(pattern);
+/*Stripping word that end in ious*/
+text="feriou ,ferryiou and ferrarious"
+let pattern=/.*iou/.exec(text);
+console.log(pattern);
+
+/*Stripping word that end in .pdf*/
+ let text ="Tiger.pdf,Music.pdf,Sandbox.pdf"
+ let pattern=/.*.pdf/.exec(text)
+
+
+/*Extract .pdf*/
+let text="Man.pdf,John.pdf";
+let pattern=/.*(pdf)/.exec(text);
+console.log(pattern)
+
+/*strip whitespace character followed by period(.) ,comma(,)   ,colon(;) or semicolon (:)*/
+et text=" jk . lm , g : f ; g ";
+let pattern=/\s.*(\s)/.exec(text);
+console.log(pattern)
+
+
+/*Strip only whose are are longer than six*./
+
+let longerThanSix="er,tip,vdindfbs,lddllbmn,bidngap";                                              
+let pattern=/(\w{7,}.*)/.exec(longerThanSix);  
+console.log(pattern);
+console.log("These text are longer than 6:",pattern[0]);
+my=pattern[0].split(",");
+ console.log(my)
+
+//  ["vdindfbs,lddllbmn,bidngap", "vdindfbs,lddllbmn,bidngap", index: 7, input: "er,tip,vdindfbs,lddllbmn,bidngap", groups: undefined]
+
+ ["vdindfbs","lddllbmn","bidngap"]
+
+
+/strip only word starting with e  */
+"exr ,ty".replace(/[.*e]/i,"");
+
+
+/*Display only words with e in it.It has some fix problems to resolved */
+/\w{0,}.*e\w{0,}/.exec("exam,er,edr,er,lp")
+
+/*fixing in the code on going*/                   
+let letter="exam,er,edr,er,lp,such";                                                                                                                                     let pattern=letter.replace(/\w{0,}.*e\w{0,}/,"");                              console.log(pattern.split(",")) 
+
+
+/*strip '' from text*/
+let story="'dvkvnvvkvnlblkfbnfbfkbndblknblbkdfnbblfnblbknfblbnfblkbnblkbn'";                                                                                             let patt=/.*[''].*/.exec(story);                                                   
+ let collect=/\w+/.exec(patt);                                                 
+ console.log(`"${collect}"`);
+
+/strip away '' from text*/
+let story="'dvkvnvvkvnlblkfbn             fbfkbndblknblbkdfnbblfnblbknfblbnfblkbnblkbn'";
+let patt=/.*[''].*/.exec(story);   console.log(patt[0]) 
+
+
+
+/*HELL */
+let story="'dvkvnvvkvnlblkfbn             fbfkbndblknblbkdfnbblfnblbknfblbnfblkbnblkbn'";
+let patt=/.*[''].*/.exec(story);                                                   let le=/.*\w+.*/.exec(story);   ; let us=[] ;                                                                                                                                                                                      for(w of le[0]){ if(w==le[0][0]){ us.pop();}}; console.log(le[0]) 
+
+
+
+/*Taking  qoute from the text and replacing it with double quote*/
+let story="'dvkvnvvkvnlblkfbn             fbfkbndblknblbkdfnbblfnblbknfblbnfblkbnblkbn'";
+let patt=/.*[''].*/.exec(story);   let thes="";                                                                                                                           for( let b of patt[0]){ if(b!==patt[0][0]){thes+=b;}}  console.log(thes)
+
+
+/*Print the some characters*/
+let apotrophe="\'" ,semicolon="\:" , star="\*", colon="\;"  , comma="\,"; console.log(comma) 
+
+/*concat method*/
+let story="vdvdsv vsdvsv",tak=[]; for( let a of story){  tak.unshift(a);}   console.log(tak.join(""))
+
+
+/*Making an array*/
+function makeObj(sting,myObj){ Object.assign(myObj,sting);console.log(myObj);}  makeObj("vdv,6fvfv",{}) 
+
+
+/*Revisiting filter */
+let p=["dvdv","dcc","vdd","dcc"] ;console.log( p.filter(s=>s=="dcc"))
+/*["dcc","dcc"]
+
+
+
+/*using reducing to concatenare word*/
+console.log(["vdvdvds","dvdsvds"].reduce((a,b)=>a+b))
+
+
+/*Inheritance */
+class mesh{ constructor(fb){ this.fb=fb;}}    
+     ;      
+  class mina extends mesh{}; let pett=new mina("fbf");console.log(pett) 
+//mina {fb: "fbf"}
+
+/*JS code which takes only numbers*/
+/*Take only JS style Numbers*/
+/.*\d+.*/.exec("-12,20e-3,.5,5")
+
+
+Module : is simple part program rely on and same time provide support for other module.
+If module depends on another hence it shift our ideas to dependencies
+They are ket in private space.
+Has some linkage
+Uses global space or interface ,can affect binding or variables
+
+**Package is a code that can distributed or shared
+Documentation tells what it does.
+
+Function constructor :
+eg :let addOne=Function("n","return n"); console.log(addOne(4))
+//4
+
+eg:
+let addOne=Function("n","return n+1"); console.log(addOne(4))
+//5
+
+/*This is a kind of module we need
+
+Javascript modules is also called CommonJS module.
+In CommonJS module uses require.
+Call require help access dependencies and interface for export
+
+
+/*Write mini reuqire*/
+require.cache = Object.create(null)
+function require(name) {
+if (!(name in require.cache)) {
+let code = readFile(name);
+let module = {exports: {}};
+require.cache[name] = module;
+let wrapper = Function("require, exports, module", code);
+wrapper(require, module.exports, module);
+}
+return require.cache[name].exports;
+}
+
+/*does nothing for now*/
+
+/*Writing your own require*/
+require.cache=Object.create("null");
+
+function require(name)
+{
+   if(!(name in require.cache))
+   {  let code=readFile(name)
+      let module={exports:{}};
+      require.cache[name]=module;
+   let wrapper=Function("require,exports,module",code);
+    wrapper(require,module.exports,module)
+ }
+ return require.cache[name].exports;
+
+}
+
+
+
+Building and Bundling 
+ensuring Javascript code can be run by old Browsers.In a modular program of 200 different files fetching file on net takes 50 milliseconds and loading whole program takes 10s.This way too long -waste of time.
+Fetching  tiny files programmers uses bundlers.
+minifiers: These are tools that take a JavaScript program and make it smaller by automatically removing comments and whitespace, renaming bindings, and replacing pieces of code with equivalent code that take up less space.[Making code small].Boring ?
+
+Module Design:
+The better way is to read or work on the programs and know what work or does not work.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*Writing fakeRequire*/
+function fakeRequire(name)
+{
+  let p=Function("name","return name");  
+  console.log(p(name))
+}; 
+fakeRequire("dvdv")
+
+
+**Asynchronous Programming :
+The many programs running at the same-no idle processor.Synchronous one activities i performed while Asynchronous is the opposite of the former.
+Exposure: Collecting two data at same time from a network and adding them together is for lets say is Asynchronous while Synchronous will collect one data after the other before operation of adding the two is done.Asynchronous can be fater than Synchronous.
+
+Waiting for action is implicit in Synchronous while explicit in Asynchronous
+.Implicit=indirect,explicit=direct or easy.
+
+callback: slow action do take call back.
+eg:
+setTimeout(() => console.log("Tick"), 500);
+
+
+/*writing some*/
+setTimeout(()=> console.log("ti"),700)
+
+setTimeout is useful in updates.
+
+
+ A promise is an asynchronous
+action that may complete at some point and produce a value. It is able to notify
+anyone who is interested when its value is available.
+The easiest way to create a promise is by calling Promise.resolve.
+eg:
+let fifteen = Promise.resolve(15);
+fifteen.then(value => console.log( value))
+
+/*Write some!*/
+let name=Promise.resolve("Joan"); 
+name.then(data=>console.log(data))
+
+**Multiple call back can be implanted with promise.
+
+
+Promise move thing into asynchronous reality.
+
+
+
+/*Asynchronous need exception because network can fail anything soon expect right now.
+
+**failure:
+new Promise((_, reject) => reject(new Error("Fail"))).then(value => console.log("Handler 1")).catch(reason => {console.log("Caught failure " + reason);
+return "nothing";
+})
+.then(value => console.log("Handler 2", value));
+network is not as you see it?
+
+
+Building your own programming language:Project based
+I’ve often felt that some human inventions were so immensely clever and complicated that I’d never be able to
+understand them. But with a little reading and experimenting, they often turn
+out to be quite mundane.
+
+Syntax or notation. Parser read a text and put in a data structure.If the syntax is not correct parser will tell you.
+expression: variable,number ,string ,application.
+
+/*Advancing promise*/
+function storage(nest, name) {return new Promise(resolve => {nest.readStorage(name, result => resolve(result));});}
+storage(bigOak, "enemies").then(value => console.log("Got", value))
+/*Coode not working*/
+
+/*writing the advancing promise*/
+function storage(nest,name){ return new Promise(resolve=>{});} ;
+;let nNest={} ;
+storage(nNest,"enemies")
+
+/*Writing promise */
+function storage(nest,name){ return new Promise(resolve=>{console.log(nNest,"We have",name);});} ;
+;let nNest="nNest" ;
+storage(nNest,"enemies")
+
+/*Writing promise*/
+ function sendNestInfo(message,receiver){ 
+  /*making a promise*/
+  return new Promise(resolve=>{console.log("Receiver:",receiver,"\nMessage:",message);});
+}
+
+sendNestInfo("Enemies are destroying all nests ","bigOak nest")
+
+/*Promise that is called with .then */
+function morePromise(message)
+{
+    return                                                          new Promise(resolve=>{console.log("The horro");})
+}
+
+
+morePromise("VDVLVNVDL").then(value=>console.log("vv"));
+/*.then is nothing really for now and throw Error.If nothing is passed it throw error but if an argument is passed then it dsiplay the argument*/
+function morePromise(message)
+{  if (message==null||message=='undefined'){throw Error;}
+return     new Promise(resolve=>{console.log( message)});}
+
+
+
+morePromise().then(value=>console.log("vv"))                
+                                           
+
+/*Rejection in promise is the same as the exception*/
+eg Promise.reject  will reject Promise.
+
+The chains of promise values created by calls to then and catch can be seen
+as a pipeline through which asynchronous values or failures move.
+
+new Promise(( rejt) => rejt(new Error("Fail"))).catch(reason => {console.log( reason);})
+.then(value => console.log( "value"));
+//value
+new Promise(( rejt) => rejt(new Error("Fail"))).catch(reason => {console.log( reason);}).then(value => console.log( value));  
+//error              
+
+
+/Mixing Promise and call back*/
+class Timeout extends Error {};
+function request(nest, target, type, content) {
+return new Promise((resolve, reject) => {
+let done = false;
+function attempt(n) {
+nest.send(target, type, content, (failed, value) => {
+done = true;
+if (failed) reject(failed);
+else resolve(value);
+});
+setTimeout(() => {
+if (done) return;
+else if (n < 3) attempt(n + 1);
+else reject(new Timeout("Timed out"));
+}, 250);
+}
+attempt(1);
+});
+}
+
+
+
+
+
+
+
+/*Writing full of of mixing of Promise and call back */
+class Timeout extends Error{}
+function request (nest,target,type,content ){
+return new Promise ((resolve,reject)=>{ let done =false ; console.log(done);
+/*Adding attempt function*/
+function Attempt(r){ console.log(r);}
+Attempt("vd");
+})
+;
+
+}   request("knvdvk","f","dv","vdv")
+
+//false
+
+
+/*Building the */
+class Timeout extends Error{}
+function request (nest,target,type,content ){
+return new Promise ((resolve,reject)=>{ let done =false ; console.log(done);})
+
+
+}   request("knvdvk","f","dv","vdv")
+
+
+
+/*Keeping on the coding */
+class Timeout extends Error{};
+function request (nest,target,type,content ){
+return new Promise ((resolve,reject)=>{ let done =false ; console.log(done);
+ function attempt(n){ done=true; console.log("Now :",done);setTimeout(() => {console.log("wwf")}, 2420);;}
+attempt(1);
+
+})
+
+
+}   request("knvdvk","f","dv","vdv")
+
+/*building the asynchronous code*/
+function requestType(name, handler) {
+defineRequestType(name, (nest, content, source,
+callback) => {
+try {
+Promise.resolve(handler(nest, content, source))
+.then(response => callback(null, response),
+failure => callback(failure));
+} catch (exception) {
+callback(exception);
+}
+});
+}
+requestType("cc","csc")
+
+//produce error
+/*Writing my own asynchronous code*/
+function requestType(name, handler) {
+function defineRequestType(){console.log("c");}; defineRequestType();
+}
+requestType("vd","f")
+
+/writing asynch function*/
+async function findInStorage(nest, name) { console.log( "fvfvFD")}; findInStorage()
+
+
+/*Async with await*/
+async function findInStorage(nest, name) {                                          function second(x){console.log("v"); }      let me= await second(name) ;              console.log(me);}; findInStorage("Vd","dv")
+
+await can be used in front of methods.
+
+Generator:This ability of functions to be paused and then resumed again is not exclusive
+to async functions. JavaScript also has a feature called generator functions.
+These are similar, but without the promises.
+eg:
+function* powers(n) {
+for (let current = n;; current *= n) {
+yield current;
+}
+}
+for (let power of powers(3)) {
+if (power > 50) break;
+console.log(power);
+}
+
+
+/*Writing geenerator function */
+function* powers(n){
+for(current=n;;current*=n)
+{ yield current;}
+}
+
+for (let num of powers(2))
+{  if(num>17)break;console.log(num);;} 
+ An async function is a special type of generator.
+
+Event loop schedule when a programme should be executed.
+
+eg:
+
+let start = Date.now();
+setTimeout(() => {
+console.log("Timeout ran at", Date.now() - start);
+}, 20);
+while (Date.now() < start + 50) {}
+console.log("Wasted time until", Date.now() - start);
+
+/*Writing timeout*/
+ setTimeout(()=> { console.log("Time out")},30)
+
+
+
+
+/*Promise again*./
+Promise.resolve("Done").then(console.log);
+console.log("Me first!");
+/* Me first!
+   Done*/
+
+
+/*Making your programming language*/
+{
+type: "apply",
+operator: {type: "word", name: ">"},
+args: [
+{type: "word", name: "x"},
+{type: "value", value: 5}
+]
+}
+
+//Egg Programming Language
+function parseExpression(program) {
+program = skipSpace(program);
+let match, expr;
+if (match = /^"([^"]*)"/.exec(program)) {
+expr = {type: "value", value: match[1]};
+} else if (match = /^\d+\b/.exec(program)) {
+expr = {type: "value", value: Number(match[0])};
+} else if (match = /^[^\s(),#"]+/.exec(program)) {
+expr = {type: "word", name: match[0]};
+} else {
+throw new SyntaxError("Unexpected syntax: " + program);
+} ;console.log(expr)
+return parseApply(expr, program.slice(match[0].length));
+}
+function skipSpace(string) {
+let first = string.search(/\S/);
+if (first == -1) return "";
+return string.slice(first);
+}
+
+
+function parseApply(expr, program) {
+program = skipSpace(program);
+if (program[0] != "(") {
+return {expr: expr, rest: program};
+}
+program = skipSpace(program.slice(1));
+expr = {type: "apply", operator: expr, args: []};
+while (program[0] != ")") {
+let arg = parseExpression(program);
+expr.args.push(arg.expr);
+program = skipSpace(arg.rest);
+if (program[0] == ",") {
+program = skipSpace(program.slice(1));
+} else if (program[0] != ")") {
+205
+throw new SyntaxError("Expected ',' or ')'");
+}
+}
+return parseApply(expr, program.slice(1));
+}
+
+
+
+function parse(program) {
+let {expr, rest} = parseExpression(program);
+if (skipSpace(rest).length > 0) {
+throw new SyntaxError("Unexpected text after program");
+}
+return expr;
+}
+console.log(parse("+(a, 10)"));
+
+
+
+/*Evaluator of Egg Programming Language:checkto see if data structure is tree*/
+const specialForms = Object.create(null);
+function evaluate(expr, scope) {
+if (expr.type == "value") {
+return expr.value;
+} else if (expr.type == "word") {
+if (expr.name in scope) {
+return scope[expr.name];
+} else {
+throw new ReferenceError(
+`Undefined binding: ${expr.name}`);
+}
+} else if (expr.type == "apply") {
+let {operator, args} = expr;
+if (operator.type == "word" &&
+operator.name in specialForms) {
+return specialForms[operator.name](expr.args, scope);
+} else {
+let op = evaluate(operator, scope);
+if (typeof op == "function") {
+return op(...args.map(arg => evaluate(arg, scope)));
+} else {
+throw new TypeError("Applying a non-function.");
+}
+}
+}
+}
+
+
+
+/*Writing simple Spider Language */
+ structure :
+   use any number to print text 
+   if a number is not infront show error.
+/*start*/
+  delSpace
+ compareExp
+ printExp
+
+let begin:
+ function  compareExp(input) 
+{  input=delSpace(input);
+   let match=/\w+/.exec(input);
+  ;return { output: `${match.slice(0,1)}`};
+}
+ 
+function delSpace(text)
+{ let  match=/\d/.exec(text);                                       if(text[0]==match)
+{let index=text.search(/\s/);
+  text=text.slice(1);return text; }  else {throw Error}
+}
+
+
+console.log(compareExp("`2Hello World`"))
+
+   
+
+JS and web browser:
+No browser no JS.
+The World Wide Web (not to be confused with the Internet as a whole) is a
+set of protocols and formats that allow us to visit web pages in a browser. 
+HTML is doc fo web pages.
+Isolating a programming environment in this way is called sandboxing, the
+idea being that the program is harmlessly playing in a sandbox
+
+
+DOC STRUCTURE:
+<!doctype html>
+<html>
+<head>
+<title>My home page</title>
+</head>
+<body>
+<h1>My home page</h1>
+<p>Hello, I am Marijn and this is my home page.</p>
+<p>I also wrote a book! Read it
+<a href="http://eloquentjavascript.net">here</a>.</p>
+</body>
+</html>
