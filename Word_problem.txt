@@ -1,0 +1,137 @@
+Word problems
+Certainly! Let's dive into some fundamental math concepts and problems. While I can't fit everything into exactly 50 lines, I'll provide concise explanations for each topic:
+
+1. **Basic Arithmetic**:
+   - Addition, subtraction, multiplication, and division of numbers.
+   - Example: \(5 + 3 = 8\).
+
+2. **Linear Equations**:
+   - Solve for a single variable in an equation.
+   - Example: \(2x + 3 = 7\).
+
+3. **Quadratic Equations**:
+   - Solve equations with squared terms.
+   - Example: \(x^2 - 4x + 4 = 0\).
+
+4. **Functions and Graphs**:
+   - Understand functions, domain, range, and graphing.
+   - Example: Plot \(y = 2x + 1\).
+
+5. **Exponents and Radicals**:
+   - Deal with powers and roots.
+   - Example: \(\sqrt{9} = 3\).
+
+6. **Fractions and Decimals**:
+   - Convert between fractions and decimals.
+   - Example: \(0.75 = \frac{3}{4}\).
+
+7. **Percentages**:
+   - Calculate percentages and solve related problems.
+   - Example: What is 20% of 80?
+
+8. **Geometry**:
+   - Understand shapes, area, perimeter, and volume.
+   - Example: Find the area of a rectangle.
+
+9. **Trigonometry**:
+   - Study angles, sine, cosine, and tangent.
+   - Example: \(\sin(30^\circ) = 0.5\).
+
+10. **Calculus Basics**:
+    - Differentiation and integration.
+    - Example: Find the derivative of \(f(x) = 3x^2\).
+
+Remember, math is a vast field, and these topics are just the tip of the iceberg. If you have specific questions or need further explanations, feel free to ask! 🧮📐🔢.
+
+Source: Conversation with Bing, 26/2/2024
+(1) Step-by-Step Math Problem Solver. https://quickmath.com/.
+(2) Mathway | Basic Math Problem Solver. https://www.mathway.com/BasicMath.
+(3) Linear equations, functions, & graphs | Khan Academy. https://www.khanacademy.org/math/algebra-home/alg-linear-eq-func.
+(4) Step-by-Step Calculator - Symbolab. https://www.symbolab.com/solver.
+(5) Getty. https://media.gettyimages.com/photos/graph-of-parabola-picture-id1183952376?b=1&k=6&m=1183952376&s=612x612&w=0&h=fK0TOa_wgY1T3UwslO7xzcNq3d_FTXjd2g2IlxUtsZ4=.
+(6) Getty. https://media.gettyimages.com/vectors/percentage-loading-circles-vector-id1033177882?b=1&k=6&m=1033177882&s=612x612&w=0&h=Z-Pgt3S-xk_hYuCrhoTjx7E7sM2vOobszfW5nU0OH0g=.
+
+Certainly! Let's explore some **word problems involving linear equations** with unknown variables. I'll keep it concise:
+
+1. **Twice a Variable**:
+   - Translate: Twice a variable is added to 4.
+   - Algebraic expression: \(4 + 2x\).
+
+2. **Subtracting Three Times a Number**:
+   - Translate: Three times a number is subtracted from 7.
+   - Algebraic expression: \(7 - 3x\).
+
+3. **Eight Less Than a Number**:
+   - Translate: 8 less than a number.
+   - Algebraic expression: \(x - 8\).
+
+4. **Simplifying Expressions**:
+   - Given: Subtract \(5p^2 - 7p + 2\) from \(3p^2 + 4p\).
+   - Simplified result: \(-2p^2 + 11p - 2\).
+
+5. **Money in Dimes and Quarters**:
+   - Given: Money from \(x\) dimes and \(y\) quarters.
+   - Total amount: \(0.10x + 0.25y\) dollars.
+
+Now, let's solve some word problems directly involving equations:
+
+1. **Five Times an Unknown Number**:
+   - Equation: \(5x = 60\).
+   - Solution: \(x = 12\).
+
+2. **Subtracting 5 from Twice an Unknown Number**:
+   - Equation: \(2x - 5 = 13\).
+   - Solution: \(x = 9\).
+
+3. **A Number Subtracted from 9**:
+   - Equation: \(9 - x = 2x\).
+   - Solution: \(x = 3\).
+
+4. **Multiplying an Unknown Number by Five**:
+   - Equation: \(5x = x + 12\).
+   - Solution: \(x = 3\).
+
+Remember, these problems involve **unknown variables**, and solving them helps us find the values of those variables. If you have more questions or need further examples, feel free to ask! 🧮📝🔍.
+
+Source: Conversation with Bing, 26/2/2024
+(1) 1.20: Word Problems for Linear Equations - Mathematics LibreTexts. https://math.libretexts.org/Bookshelves/Algebra/Book%3A_Arithmetic_and_Algebra_%28ElHitti_Bonanome_Carley_Tradler_and_Zhou%29/01%3A_Chapters/1.20%3A_Word_Problems_for_Linear_Equations.
+(2) Word Problems on Linear Equations - CCSS Math Answers. https://ccssmathanswers.com/word-problems-on-linear-equations/.
+(3) How to Solve Word Problems to Identify Independent and Dependent Variables. https://www.effortlessmath.com/math-topics/how-to-solve-word-problems-to-identify-independent-and-dependent-variables/.
+(4) Variables and equations word problem worksheets | K5 Learning. https://www.k5learning.com/free-math-worksheets/fifth-grade-5/word-problems/variables-equations.
+(5) Linear Equation Word Problems: Steps, Solved Examples and FAQs. https://www.etutorworld.com/math/linear-equation-word-problems.html.
+
+
+
+Certainly! Let's continue with more examples of word problems involving **linear equations** and **unknown variables**:
+
+6. **Age Problem**:
+   - A father is three times as old as his son. In 10 years, the father's age will be twice the son's age. How old are they now?
+   - Equation: Let \(x\) represent the son's age. The father's age is \(3x\).
+     - \((3x + 10) = 2(x + 10)\)
+     - Solve for \(x\): \(x = 10\). Son's age = 10 years, Father's age = 30 years.
+
+7. **Coin Problem**:
+   - You have a total of 40 coins (dimes and quarters). The total value is $7.25. How many dimes and how many quarters do you have?
+   - Let \(x\) represent the number of dimes and \(y\) represent the number of quarters.
+     - \(0.10x + 0.25y = 7.25\)
+     - Solve for \(x\) and \(y\): \(x = 15\), \(y = 25\).
+
+8. **Speed and Distance Problem**:
+   - A car travels at a constant speed. It covers 180 miles in 3 hours. What is its speed?
+   - Let \(x\) represent the speed (in miles per hour).
+     - \(x \cdot 3 = 180\)
+     - Solve for \(x\): \(x = 60\) mph.
+
+9. **Mixing Problem**:
+   - A chemist needs to create 20 liters of a solution containing 30% acid. How much pure acid should be mixed with a 10% acid solution?
+   - Let \(x\) represent the amount of pure acid added.
+     - \(0.10(20 - x) + 1.00x = 0.30 \cdot 20\)
+     - Solve for \(x\): \(x = 10\) liters of pure acid.
+
+10. **Profit Problem**:
+    - A company sells widgets. The cost to produce each widget is $8, and they sell each widget for $15. How many widgets must they sell to make a profit of $200?
+    - Let \(x\) represent the number of widgets sold.
+      - \(15x - 8x = 200\)
+      - Solve for \(x\): \(x = 40\) widgets.
+
+Remember, these problems involve setting up equations based on the given information and solving for the unknown variables. If you have more specific scenarios or need additional examples, feel free to ask! 🧮📝🔍.
